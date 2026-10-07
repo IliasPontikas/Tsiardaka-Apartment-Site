@@ -11,7 +11,7 @@ export const Preloader = {
         var bar = el.querySelector('.preloader-bar');
         var progress = 0;
         var startTime = Date.now();
-        // First visit (or after 14 days): short branded moment. Returning visitors / reduced motion: almost instant.
+        // First visit (or after 14 days): the full branded moment (roof drawn, logo, tagline). Returning visitors: a shorter one. Reduced motion: almost none.
         var seen = false;
         try {
             var last = parseInt(localStorage.getItem('preloader-seen'), 10) || 0;
@@ -19,7 +19,7 @@ export const Preloader = {
             localStorage.setItem('preloader-seen', String(Date.now()));
         } catch (e) {}
         var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var MIN_DISPLAY = options.minDisplay ?? ((seen || reduced) ? 250 : 1400);
+        var MIN_DISPLAY = options.minDisplay ?? (reduced ? 250 : (seen ? 900 : 2200));
         var onReveal = options.onReveal || null;
 
         var interval = setInterval(function() {

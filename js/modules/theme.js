@@ -7,7 +7,8 @@
 export const ThemeToggle = {
     init() {
         var saved = localStorage.getItem('theme');
-        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Light is the default for everyone; dark only if the visitor chose it with the toggle
+        if (saved === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
         document.querySelectorAll('.theme-toggle').forEach(function(btn) {
