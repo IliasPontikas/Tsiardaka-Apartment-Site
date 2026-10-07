@@ -1,0 +1,65 @@
+name: Update availability
+
+# Copies the Airbnb booking calendar into availability.json (same site, so the browser can read it).
+# Browsers cannot read Airbnb's calendar directly (CORS), so this job does it server-side every hour.
+# The calendar link lives ONLY in the GitHub secret AIRBNB_ICS_URL (never in the code).
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: availability
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check calendar secret
+        id: check
+        env:
+          ICS_URL: ${{ secrets.AIRBNB_ICS_URL }}
+        run: |
+          if [ -z "$ICS_URL" ]; then
+            echo "::warning::Secret AIRBNB_ICS_URL is not set (GitHub -> Settings -> Secrets and variables -> Actions). Skipping."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Airbnb calendar
+        if: steps.check.outputs.ok == 'true'
+        env:
+          ICS_URL: ${{ secrets.AIRBNB_ICS_URL }}
+        run: curl -fsSL --retry 3 --max-time 60 "$ICS_URL" -o calendar.ics
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.ok == 'true'
+        with:
+          node-version: 22
+
+      - name: Convert to availability.json
+        if: steps.check.outputs.ok == 'true'
+        run: node tools/ics-to-json.mjs calendar.ics availability.json
+
+      - name: Commit if bookings changed
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          # ignore the "updated" timestamp when deciding whether anything changed
+          if git diff --quiet -I'"updated"' -- availability.json; then
+            echo "No booking changes"
+          else
+            git config user.name "availability-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add availability.json
+            git commit -m "chore: update availability from Airbnb calendar"
+            git push origin HEAD:main
+          fi

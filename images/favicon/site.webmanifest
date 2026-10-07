@@ -1,0 +1,24 @@
+{
+    "name": "Tsiardaka Apartment - Τρίκαλα",
+    "short_name": "Tsiardaka",
+    "description": "Apartment in the centre of Trikala, 800 steps from the Elf Mill",
+    "icons": [
+        {
+            "src": "/images/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#1C1C1E",
+    "background_color": "#1C1C1E",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}

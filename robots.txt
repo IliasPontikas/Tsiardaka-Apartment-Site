@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tsiardaka-apartment.gr/sitemap.xml
