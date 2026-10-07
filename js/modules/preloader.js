@@ -28,7 +28,10 @@ export const Preloader = {
             if (bar) bar.style.width = progress + '%';
         }, 200);
 
+        var revealed = false;
         var reveal = function() {
+            if (revealed) return;
+            revealed = true;
             var elapsed = Date.now() - startTime;
             var remaining = Math.max(0, MIN_DISPLAY - elapsed);
             setTimeout(function() {
@@ -41,6 +44,9 @@ export const Preloader = {
                 }, 300);
             }, remaining);
         };
+
+        // Fail-safe: never keep visitors on the loading screen, even if a slow outside file delays the page "load" event
+        setTimeout(reveal, 4500);
 
         if (document.readyState === 'complete') {
             reveal();

@@ -154,3 +154,9 @@ The bot adds small "refresh pages" commits on `main`, so always `git pull --reba
 The site is published by GitHub Pages from the `main` branch (root folder). It is free, with unlimited publishes.
 The Airbnb calendar link is NOT in the code: it is the GitHub secret `AIRBNB_ICS_URL`
 (Settings -> Secrets and variables -> Actions). If Airbnb gives you a new link, replace the secret's value.
+
+## Which repository?
+
+The live site's repository is `IliasPontikas/Tsiardaka-Apartment-Site` (public, published by GitHub Pages).
+The older private repository `Tsiardaka-Apartment` is only a backup of the history.
+To work locally: `git clone https://github.com/IliasPontikas/Tsiardaka-Apartment-Site.git` (into a NEW folder), then use the usual commands.
