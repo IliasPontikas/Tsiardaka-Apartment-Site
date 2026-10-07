@@ -855,11 +855,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 /* Soft blurred bedroom photo behind the amenities (the cards stay on top) */
 #amenities::after {
     content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-    background: url('../images/gallery/bedroom-painting-800.webp') center 42% / cover no-repeat;
-    opacity: 0.3; filter: blur(7px); transform: scale(1.06);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
-    mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+    /* whole photo shown (not zoomed): height of the section, centred; its sides fade into the section colour */
+    background: url('../images/gallery/bedroom-painting-800.webp') center / auto 100% no-repeat;
+    opacity: 0.34; filter: blur(5px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent), linear-gradient(to right, transparent 20%, #000 38%, #000 62%, transparent 80%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent), linear-gradient(to right, transparent 20%, #000 38%, #000 62%, transparent 80%);
+    mask-composite: intersect;
 }
+@media (max-width: 768px) { #amenities::after { mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent); background-size: cover; } }
 [data-theme="dark"] #amenities::after { opacity: 0.16; }
 #amenities { overflow: hidden; }
 .amenities-grid {
