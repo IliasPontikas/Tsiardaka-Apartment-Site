@@ -315,7 +315,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 
 .nav-links {
     display: flex;
-    gap: clamp(0.9rem, 1.4vw, 1.7rem);
+    gap: clamp(0.7rem, 1vw, 1.3rem);
     padding: 0;
     list-style: none;
 }
@@ -323,8 +323,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
     color: var(--text-dark);
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    font-size: 0.7rem;
     position: relative;
     padding: 0.25rem 0;
 }
@@ -1735,6 +1735,7 @@ footer { background: #1C1C1E; color: #F5F4F2; padding: 4rem 0 2rem; }
     transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 #floating-book-btn.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+body.menu-is-open #floating-book-btn, body.menu-is-open .back-to-top { opacity: 0; pointer-events: none; } /* the open menu already has its own Book button */
 #floating-book-btn.hidden  { opacity: 0; transform: translateY(20px); pointer-events: none; }
 .floating-book-toggle {
     background: var(--primary);
@@ -1821,7 +1822,7 @@ footer { background: #1C1C1E; color: #F5F4F2; padding: 4rem 0 2rem; }
     .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
     .footer-grid .footer-col:first-child { grid-column: 1 / -1; }
 }
-@media (max-width: 1330px) {
+@media (max-width: 1400px) {
     /* grid stays 1fr auto 1fr: empty left cell keeps the logo centred, hamburger sits on the right */
     .nav-left { display: flex; }
     .nav-tools { display: flex; }

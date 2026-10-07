@@ -11,6 +11,7 @@ const translations = {
         "nav.booking": "Κράτηση",
         "nav.attractions": "Αξιοθέατα",
         "nav.contact": "Επικοινωνία",
+        "nav.reviews": "Κριτικές",
         "hero.title": "Το κέντρο στα πόδια σου!",
         "hero.subtitle": "Κάντε κράτηση απευθείας από εμάς για καλύτερες τιμές και εξατομικευμένη εξυπηρέτηση.",
         "hero.button": "Κάντε Κράτηση",
@@ -228,6 +229,7 @@ const translations = {
         "nav.booking": "Book Now",
         "nav.attractions": "Attractions",
         "nav.contact": "Contact",
+        "nav.reviews": "Reviews",
         "hero.title": "The Center at Your Feet!",
         "hero.subtitle": "Book directly with us for better prices and personalized service.",
         "hero.button": "Book Your Stay",
@@ -485,6 +487,8 @@ class LanguageSwitcher {
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (translations[lang][key]) {
+                // the hero title is split into letters for its reveal animation: keep those spans
+                if (element.querySelector('.char') && element.textContent.replace(/\u00A0/g, ' ') === translations[lang][key]) return;
                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                     element.placeholder = translations[lang][key];
                 } else {

@@ -44,6 +44,7 @@ export const Navigation = {
                     mobile.classList.remove('active');
                     if (hamburger) hamburger.classList.remove('active');
                     nav.classList.remove('menu-open');
+                    document.body.classList.remove('menu-is-open');
                 }
             } else {
                 nav.classList.remove('nav-hidden'); // scrolling up
@@ -62,6 +63,7 @@ export const Navigation = {
                 var open = hamburger.classList.toggle('active');
                 mobile.classList.toggle('active');
                 nav.classList.toggle('menu-open', open); // keeps logo and X readable on the light menu
+                document.body.classList.toggle('menu-is-open', open); // hides the floating buttons
                 hamburger.setAttribute('aria-expanded', open);
                 mobile.setAttribute('aria-hidden', !open);
             });
@@ -70,6 +72,7 @@ export const Navigation = {
                     hamburger.classList.remove('active');
                     mobile.classList.remove('active');
                     nav.classList.remove('menu-open');
+                    document.body.classList.remove('menu-is-open');
                     hamburger.setAttribute('aria-expanded', 'false');
                     mobile.setAttribute('aria-hidden', 'true');
                 });
