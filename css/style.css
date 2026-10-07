@@ -856,11 +856,11 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 #amenities::after {
     content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
     background: url('../images/gallery/kitchen-overview-1200.webp') center / cover no-repeat;
-    opacity: 0.3; filter: blur(6px); transform: scale(1.05);
+    opacity: 0.46; filter: blur(4px); transform: scale(1.05);
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
     mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
 }
-[data-theme="dark"] #amenities::after { opacity: 0.16; }
+[data-theme="dark"] #amenities::after { opacity: 0.26; }
 #amenities { overflow: hidden; }
 .amenities-grid {
     display: flex;
