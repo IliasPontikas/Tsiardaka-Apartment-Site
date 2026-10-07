@@ -852,6 +852,16 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 
 /* 15. AMENITIES */
 #amenities { background: var(--section-alt); }
+/* Soft blurred bedroom photo behind the amenities (the cards stay on top) */
+#amenities::after {
+    content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: url('../images/gallery/bedroom-painting-800.webp') center 42% / cover no-repeat;
+    opacity: 0.3; filter: blur(7px); transform: scale(1.06);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+}
+[data-theme="dark"] #amenities::after { opacity: 0.16; }
+#amenities { overflow: hidden; }
 .amenities-grid {
     display: flex;
     flex-direction: column;
