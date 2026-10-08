@@ -7,7 +7,7 @@
 export const PWA = {
     init() {
         if (!('serviceWorker' in navigator)) return;
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' })
             .then(function(reg)  { console.log('SW registered:', reg.scope); })
             .catch(function(err) { console.warn('SW failed:', err); });
     }

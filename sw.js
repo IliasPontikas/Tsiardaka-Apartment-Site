@@ -1,5 +1,5 @@
 // Bump CACHE_VERSION on every deploy that changes cached assets
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v5';
 const CACHE_NAME = 'tsiardaka-' + CACHE_VERSION;
 const SHELL = [
     '/',
@@ -45,8 +45,10 @@ self.addEventListener('fetch', event => {
     }
 
     // HTML, CSS, JS: network-first so a deploy is picked up immediately; cache is the offline fallback
+    // cache: 'no-cache' = always ask the server (a quick 304 if unchanged) and skip the browser's own stored copy,
+    // which GitHub Pages lets live for 10 minutes and the old hosting for much longer
     event.respondWith(
-        fetch(req).then(res => {
+        fetch(req, { cache: 'no-cache' }).then(res => {
             if (res.ok) { const copy = res.clone(); caches.open(CACHE_NAME).then(c => c.put(req, copy)); }
             return res;
         }).catch(() => caches.match(req).then(c => c || caches.match('/')))
