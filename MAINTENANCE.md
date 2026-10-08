@@ -68,6 +68,10 @@ the crossed-out price and the discount line then disappear by themselves - EU ru
 It updates **by itself every hour** from your Airbnb calendar (GitHub: Actions tab -> "Update availability").
 Booking.com or direct bookings do not appear there - block those dates in your Airbnb calendar too.
 To refresh immediately: GitHub -> Actions -> Update availability -> Run workflow.
+If a platform does not put some closed days in its calendar link (for example a whole month you closed), add them yourself in `manual-blocks.json`
+(`start` = first blocked night, `end` = last blocked night, format `YYYY-MM-DD`). The update merges them with the Airbnb calendar.
+In the Actions run, the note "Calendar contents" shows what the Airbnb link really contained.
+Optional: add a second GitHub secret `BOOKING_ICS_URL` (Booking.com calendar link) and both calendars are merged.
 
 ## Seasonal checklist (do this each season)
 

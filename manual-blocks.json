@@ -1,0 +1,6 @@
+{
+  "note": "Dates you block by hand. start = first blocked night, end = last blocked night (YYYY-MM-DD). The hourly update merges these with the Airbnb calendar.",
+  "ranges": [
+    { "start": "2026-10-01", "end": "2026-10-31", "label": "October closed" }
+  ]
+}

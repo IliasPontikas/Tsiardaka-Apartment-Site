@@ -7,7 +7,7 @@
  * Output: { "updated": "<ISO time>", "ranges": [ { "start": "YYYY-MM-DD", "end": "YYYY-MM-DD" } ] }
  * "end" is the last occupied NIGHT (the checkout day itself stays available).
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const files  = process.argv.slice(2);
 const output = files.pop();
@@ -40,6 +40,13 @@ inputs.forEach((input, n) => {
     // Only event titles and counts (no guest data), so the owner can see what each platform really exports
     report.push(`calendar ${n + 1}: ` + (Object.entries(kinds).map(([k, v]) => `${v} x "${k}"`).join(', ') || 'no events'));
 });
+// Dates the owner blocks by hand in manual-blocks.json (for closures a platform does not put in its calendar link)
+const manualFile = 'manual-blocks.json';
+if (existsSync(manualFile)) {
+    const manual = JSON.parse(readFileSync(manualFile, 'utf8')).ranges || [];
+    manual.forEach(r => { if (/^\d{4}-\d{2}-\d{2}$/.test(r.start) && /^\d{4}-\d{2}-\d{2}$/.test(r.end) && r.end >= r.start) ranges.push({ start: r.start, end: r.end }); });
+    report.push(`manual-blocks.json: ${manual.length} range(s)`);
+}
 ranges.sort((a, b) => a.start.localeCompare(b.start) || a.end.localeCompare(b.end));
 for (let i = ranges.length - 1; i > 0; i--) if (ranges[i].start === ranges[i - 1].start && ranges[i].end === ranges[i - 1].end) ranges.splice(i, 1); // same dates from two calendars
 
