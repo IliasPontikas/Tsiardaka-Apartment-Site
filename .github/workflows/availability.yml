@@ -41,6 +41,14 @@ jobs:
           ICS_URL: ${{ secrets.AIRBNB_ICS_URL }}
         run: curl -fsSL --retry 3 --max-time 60 "$ICS_URL" -o calendar.ics
 
+      # Optional second calendar (Booking.com): add the secret BOOKING_ICS_URL and it is merged in
+      - name: Download Booking.com calendar (optional)
+        if: steps.check.outputs.ok == 'true'
+        env:
+          BOOKING_URL: ${{ secrets.BOOKING_ICS_URL }}
+        run: |
+          if [ -n "$BOOKING_URL" ]; then curl -fsSL --retry 3 --max-time 60 "$BOOKING_URL" -o calendar2.ics; fi
+
       - uses: actions/setup-node@v4
         if: steps.check.outputs.ok == 'true'
         with:
@@ -48,7 +56,12 @@ jobs:
 
       - name: Convert to availability.json
         if: steps.check.outputs.ok == 'true'
-        run: node tools/ics-to-json.mjs calendar.ics availability.json
+        run: |
+          if [ -f calendar2.ics ]; then
+            node tools/ics-to-json.mjs calendar.ics calendar2.ics availability.json
+          else
+            node tools/ics-to-json.mjs calendar.ics availability.json
+          fi
 
       - name: Commit if bookings changed
         if: steps.check.outputs.ok == 'true'
