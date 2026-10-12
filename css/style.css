@@ -1719,6 +1719,7 @@ footer { background: #1C1C1E; color: #F5F4F2; padding: 4rem 0 2rem; }
 .footer-host { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.3rem 1rem; font-size: 0.85rem; letter-spacing: 0.02em; }
 .footer-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--secondary); opacity: 0.8; }
 /* rows 3 and 4: copyright, then the small credit, set apart by a short line */
+.footer-photos { font-size: 0.74rem; opacity: 0.7; }
 .footer-copy { font-size: 0.8rem; opacity: 0.8; margin-top: 0.6rem !important; position: relative; padding-top: 1.4rem; }
 .footer-copy::before { content: ''; position: absolute; top: 0; left: 50%; width: 44px; height: 1px; background: rgba(245,244,242,0.3); transform: translateX(-50%); }
 .footer-credit { font-size: 0.74rem; font-style: italic; letter-spacing: 0.04em; opacity: 0.6; }

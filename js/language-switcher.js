@@ -221,7 +221,8 @@ const translations = {
         "faq.q7": "Τι αξίζει να δω γύρω από τα Τρίκαλα;",
         "faq.a7": "Με το αυτοκίνητο: τα Μετέωρα (περίπου 29 λεπτά), το Πετρούλι (περίπου 50 λεπτά) και η Λίμνη Πλαστήρα (περίπου 1 ώρα).",
         "footer.privacy": "Πολιτική Απορρήτου",
-        "footer.cookies": "Ρυθμίσεις cookies"
+        "footer.cookies": "Ρυθμίσεις cookies",
+        "footer.photos": "Φωτογραφία Παλαιοκαρυάς: Wikimedia Commons"
     },
 
     en: {
@@ -442,7 +443,8 @@ const translations = {
         "faq.q7": "What should I see around Trikala?",
         "faq.a7": "By car: Meteora (about 29 minutes), Pertouli (about 50 minutes) and Lake Plastira (about 1 hour).",
         "footer.privacy": "Privacy Policy",
-        "footer.cookies": "Cookie settings"
+        "footer.cookies": "Cookie settings",
+        "footer.photos": "Palaiokarya photo: Wikimedia Commons"
     }
 };
 
