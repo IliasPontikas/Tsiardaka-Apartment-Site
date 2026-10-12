@@ -11,16 +11,21 @@ export const Preloader = {
         var bar = el.querySelector('.preloader-bar');
         var progress = 0;
         var startTime = Date.now();
-        // First visit (or after 14 days): the full branded moment (roof drawn, logo, tagline). Returning visitors: a shorter one. Reduced motion: almost none.
-        var seen = false;
-        try {
-            var last = parseInt(localStorage.getItem('preloader-seen'), 10) || 0;
-            seen = Date.now() - last < 14 * 24 * 3600 * 1000;
-            localStorage.setItem('preloader-seen', String(Date.now()));
-        } catch (e) {}
-        var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var MIN_DISPLAY = options.minDisplay ?? (reduced ? 250 : (seen ? 900 : 2200));
         var onReveal = options.onReveal || null;
+
+        // The full branded moment (roof drawn, logo, tagline) is shown once per browser session.
+        // A tiny script in <head> adds "no-preloader" to <html> on every later page load of the same session
+        // (refresh, reload, switching Greek/English), so the screen never even flashes. Reduced motion: almost none.
+        if (document.documentElement.classList.contains('no-preloader')) {
+            el.remove();
+            // no loading screen: still let the hero text appear letter by letter
+            setTimeout(function() { if (typeof onReveal === 'function') onReveal(); }, 150);
+            return;
+        }
+        try { sessionStorage.setItem('preloader-seen', '1'); } catch (e) {}
+
+        var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var MIN_DISPLAY = options.minDisplay ?? (reduced ? 250 : 2200);
 
         var interval = setInterval(function() {
             progress += Math.random() * 10;
