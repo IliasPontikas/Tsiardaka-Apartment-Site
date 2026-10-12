@@ -222,7 +222,10 @@ const translations = {
         "faq.a7": "Με το αυτοκίνητο: τα Μετέωρα (περίπου 29 λεπτά), το Πετρούλι (περίπου 50 λεπτά) και η Λίμνη Πλαστήρα (περίπου 1 ώρα).",
         "footer.privacy": "Πολιτική Απορρήτου",
         "footer.cookies": "Ρυθμίσεις cookies",
-        "footer.photos": "Φωτογραφία Παλαιοκαρυάς: Wikimedia Commons"
+        "footer.photos.label": "Φωτογραφίες:",
+        "footer.photos.pal": "Παλαιοκαρυά",
+        "footer.photos.met": "Μετέωρα",
+        "footer.photos.cropped": "(περικοπή)"
     },
 
     en: {
@@ -444,7 +447,10 @@ const translations = {
         "faq.a7": "By car: Meteora (about 29 minutes), Pertouli (about 50 minutes) and Lake Plastira (about 1 hour).",
         "footer.privacy": "Privacy Policy",
         "footer.cookies": "Cookie settings",
-        "footer.photos": "Palaiokarya photo: Wikimedia Commons"
+        "footer.photos.label": "Photos:",
+        "footer.photos.pal": "Palaiokarya",
+        "footer.photos.met": "Meteora",
+        "footer.photos.cropped": "(cropped)"
     }
 };
 
