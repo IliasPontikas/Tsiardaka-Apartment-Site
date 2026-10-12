@@ -15,7 +15,7 @@ export const CookieConsentModule = {
         cc.run({
             categories: {
                 necessary: { enabled: true, readOnly: true },
-                analytics: { enabled: false }
+                analytics: { enabled: false, autoClear: { cookies: [{ name: /^_ga/ }] } } // withdrawing consent also deletes the Google Analytics cookies
             },
             guiOptions: { consentModal: { layout: 'bar', position: 'bottom' } },
             language: {
@@ -46,6 +46,14 @@ export const CookieConsentModule = {
                     if (typeof onAnalyticsConsent === 'function') onAnalyticsConsent();
                 }
             }
+        });
+
+        // Footer link "Cookie settings": withdrawing consent must be as easy as giving it
+        document.querySelectorAll('[data-cookie-settings]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (cc.reset) cc.reset(true);   // forgets the choice and shows the banner again
+            });
         });
     }
 };

@@ -73,6 +73,16 @@ If a platform does not put some closed days in its calendar link (for example a 
 In the Actions run, the note "Calendar contents" shows what the Airbnb link really contained.
 Optional: add a second GitHub secret `BOOKING_ICS_URL` (Booking.com calendar link) and both calendars are merged.
 
+## Weather
+
+The 5-day forecast comes from MET Norway (free, credit "MET Norway · CC BY 4.0" is shown under the widget - keep it).
+A GitHub job (Actions -> "Update weather") collects it every 3 hours into `weather.json`; visitors never call MET directly.
+To refresh now: Actions -> Update weather -> Run workflow.
+
+## Fonts
+
+Fonts are in `fonts/` and loaded from this site (not from Google), so no visitor data goes to Google Fonts.
+
 ## Seasonal checklist (do this each season)
 
 - Check the New Year offer dates and prices.

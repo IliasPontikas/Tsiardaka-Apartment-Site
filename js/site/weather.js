@@ -1,5 +1,6 @@
 /**
- * weather.js — 5-day weather forecast widget via Open-Meteo API
+ * weather.js — 5-day weather forecast widget. Data: MET Norway (CC BY 4.0), collected into weather.json by
+ *               .github/workflows/weather.yml (visitors never call MET directly)
  * Requires: #weather-widget, #weather-forecast, .weather-loading elements
  */
 
@@ -42,12 +43,15 @@ export const WeatherWidget = {
 
     fetchWeather() {
         var self = this;
-        var url  = 'https://api.open-meteo.com/v1/forecast?latitude=39.555&longitude=21.7678&daily=weather_code,temperature_2m_max,temperature_2m_min&wind_speed_unit=kmh&timezone=Europe%2FAthens&forecast_days=5';
-        fetch(url)
+        fetch('/weather.json', { cache: 'no-cache' })
             .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-            .then(function(data) { self._data = data.daily; self.render(); })
+            .then(function(data) {
+                if (!data.time || !data.time.length) throw new Error('forecast not ready yet');
+                self._data = data;
+                self.render();
+            })
             .catch(function(err) {
-                console.warn('Weather:', err);
+                console.warn('Weather:', err.message || err);
                 var loading = document.querySelector('.weather-loading');
                 if (loading) loading.textContent = '—';
             });
@@ -59,22 +63,28 @@ export const WeatherWidget = {
         if (!widget || !forecast || !this._data) return;
 
         var daily    = this._data;
+        if (!this.SVG[daily.category[0]]) return;
         var lang     = (document.documentElement.lang || 'el').substring(0, 2);
         var dayNames = lang === 'en' ? this.DAYS_EN : this.DAYS_EL;
         var todayLbl = lang === 'en' ? 'Today' : 'Σήμερα';
         var html     = '';
+        // forecast days are Greek local dates; skip any that are already in the past if the file is a bit old
+        var today    = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Athens', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+        var first    = 0;
+        while (first < daily.time.length && daily.time[first] < today) first++;
+        if (first >= daily.time.length) return;
 
-        for (var i = 0; i < daily.time.length; i++) {
+        for (var i = first; i < daily.time.length; i++) {
             var date    = new Date(daily.time[i] + 'T00:00:00');
-            var dayName = i === 0 ? todayLbl : dayNames[date.getDay()];
-            var cat     = this.categorize(daily.weather_code[i]);
+            var dayName = daily.time[i] === today ? todayLbl : dayNames[date.getDay()];
+            var cat     = daily.category[i];
             var label   = this.LABELS[cat][lang === 'en' ? 'en' : 'el'];
             html += '<div class="weather-day">'
                 + '<span class="weather-day-name">' + dayName + '</span>'
                 + '<span class="weather-day-icon" title="' + label + '">' + this.SVG[cat] + '</span>'
                 + '<div class="weather-day-temps">'
-                + '<span class="weather-day-high">' + Math.round(daily.temperature_2m_max[i]) + '°</span>'
-                + '<span class="weather-day-low">'  + Math.round(daily.temperature_2m_min[i]) + '°</span>'
+                + '<span class="weather-day-high">' + daily.tmax[i] + '°</span>'
+                + '<span class="weather-day-low">'  + daily.tmin[i] + '°</span>'
                 + '</div></div>';
         }
 

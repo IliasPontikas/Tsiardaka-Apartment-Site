@@ -88,6 +88,7 @@ const translations = {
         "location.nearby": "Κοντινά Σημεία Ενδιαφέροντος",
         "weather.title": "Καιρός στα Τρίκαλα",
         "weather.loading": "Φόρτωση...",
+        "weather.credit": "Δεδομένα καιρού:",
         "weather.feelsLike": "Αίσθηση",
         "weather.humidity": "Υγρασία",
         "weather.wind": "Άνεμος",
@@ -219,7 +220,8 @@ const translations = {
         "faq.a6": "Ελληνικά και Αγγλικά.",
         "faq.q7": "Τι αξίζει να δω γύρω από τα Τρίκαλα;",
         "faq.a7": "Με το αυτοκίνητο: τα Μετέωρα (περίπου 29 λεπτά), το Πετρούλι (περίπου 50 λεπτά) και η Λίμνη Πλαστήρα (περίπου 1 ώρα).",
-        "footer.privacy": "Πολιτική Απορρήτου"
+        "footer.privacy": "Πολιτική Απορρήτου",
+        "footer.cookies": "Ρυθμίσεις cookies"
     },
 
     en: {
@@ -307,6 +309,7 @@ const translations = {
         "location.nearby": "Nearby Points of Interest",
         "weather.title": "Weather in Trikala",
         "weather.loading": "Loading...",
+        "weather.credit": "Weather data:",
         "weather.feelsLike": "Feels like",
         "weather.humidity": "Humidity",
         "weather.wind": "Wind",
@@ -438,7 +441,8 @@ const translations = {
         "faq.a6": "Greek and English.",
         "faq.q7": "What should I see around Trikala?",
         "faq.a7": "By car: Meteora (about 29 minutes), Pertouli (about 50 minutes) and Lake Plastira (about 1 hour).",
-        "footer.privacy": "Privacy Policy"
+        "footer.privacy": "Privacy Policy",
+        "footer.cookies": "Cookie settings"
     }
 };
 

@@ -1,3 +1,5 @@
+@import url('fonts.css'); /* self-hosted fonts (no Google Fonts) */
+
 /* ================================================================
    TSIARDAKA APARTMENT - MODERN ELEGANT DESIGN SYSTEM
    Grey · White · Black · Walnut
@@ -1126,6 +1128,8 @@ picture { display: contents; }
     margin: 0 0 1.25rem;
 }
 .weather-loading { font-size: 0.85rem; color: var(--warm-gray); }
+.weather-credit { margin: 0.9rem 0 0; font-size: 0.72rem; color: var(--text-light); text-align: right; }
+.weather-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .weather-forecast { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
 .weather-day {
     text-align: center;
