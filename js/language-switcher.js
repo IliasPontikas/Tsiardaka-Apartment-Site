@@ -66,7 +66,7 @@ const translations = {
         "attractions.square.title": "Κεντρική Πλατεία και Ποτάμι",
         "attractions.square.desc": "Το κέντρο στα πόδια σου. Το ποτάμι διασχίζει την χριστουγεννιάτικη πόλη δίπλα στο σπίτι.",
         "attractions.square.distance": "9 λεπτά",
-        "attractions.oldtown.title": "Παλιά Πόλη και Φρούρειο",
+        "attractions.oldtown.title": "Παλιά Πόλη και Φρούριο",
         "attractions.oldtown.desc": "Παραδοσιακά αρχοντικά και γραφικά σοκάκια. Ιδανική για βόλτες και φωτογραφίες.",
         "attractions.oldtown.distance": "17 λεπτά",
         "attractions.manavika.title": "Μαναβικά",
