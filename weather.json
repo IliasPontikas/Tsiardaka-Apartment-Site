@@ -1,1 +1,32 @@
-{ "updated": "", "source": "MET Norway (CC BY 4.0)", "time": [], "category": [], "tmax": [], "tmin": [] }
+{
+  "updated": "2026-10-12T15:54:50.579Z",
+  "source": "MET Norway (CC BY 4.0)",
+  "time": [
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16"
+  ],
+  "category": [
+    "partly",
+    "rain",
+    "partly",
+    "sun",
+    "rain"
+  ],
+  "tmax": [
+    21,
+    16,
+    18,
+    21,
+    18
+  ],
+  "tmin": [
+    15,
+    13,
+    12,
+    10,
+    11
+  ]
+}
