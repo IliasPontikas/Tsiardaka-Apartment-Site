@@ -1671,8 +1671,6 @@ picture { display: contents; }
 }
 .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq-item p { padding: 0 1.5rem 1.3rem; color: var(--text-light); line-height: 1.7; }
-.footer-bottom a { text-decoration: underline; text-underline-offset: 3px; }
-.footer-credit { opacity: 0.8; }
 @media (max-width: 768px) { .direct-grid { grid-template-columns: 1fr; margin-bottom: 3rem; } }
 
 /* 22. FOOTER */
@@ -1699,12 +1697,36 @@ footer { background: #1C1C1E; color: #F5F4F2; padding: 4rem 0 2rem; }
 }
 .footer-links a:hover { opacity: 1; color: var(--secondary); }
 .footer-bottom {
-    border-top: 1px solid rgba(245,244,242,0.1);
+    border-top: 1px solid rgba(245,244,242,0.14);
     margin-top: 3rem;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
+    display: grid;
+    justify-items: center;
+    gap: 1.1rem;
     text-align: center;
-    font-size: 0.82rem;
-    opacity: 0.5;
+    color: rgba(245,244,242,0.78);
+}
+.footer-bottom p { margin: 0; }
+/* row 1: legal links, with a small dot between them */
+.footer-legal { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.4rem 1.6rem; }
+.footer-legal a {
+    color: #F5F4F2; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; padding: 0.35rem 0; border-bottom: 1px solid rgba(245,244,242,0.35);
+    transition: color 0.3s, border-color 0.3s;
+}
+.footer-legal a:hover { color: var(--secondary); border-color: var(--secondary); }
+/* row 2: host and registration number */
+.footer-host { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.3rem 1rem; font-size: 0.85rem; letter-spacing: 0.02em; }
+.footer-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--secondary); opacity: 0.8; }
+/* rows 3 and 4: copyright, then the small credit, set apart by a short line */
+.footer-copy { font-size: 0.8rem; opacity: 0.8; margin-top: 0.6rem !important; position: relative; padding-top: 1.4rem; }
+.footer-copy::before { content: ''; position: absolute; top: 0; left: 50%; width: 44px; height: 1px; background: rgba(245,244,242,0.3); transform: translateX(-50%); }
+.footer-credit { font-size: 0.74rem; font-style: italic; letter-spacing: 0.04em; opacity: 0.6; }
+@media (max-width: 768px) {
+    .footer-bottom { gap: 1rem; padding-top: 1.6rem; }
+    .footer-legal { flex-direction: column; gap: 0.2rem; }
+    .footer-host { flex-direction: column; gap: 0.5rem; }
+    .footer-sep { display: none; }
 }
 
 /* 23. BACK TO TOP — standalone circular button, sits below the book button */
