@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>try{var l=localStorage.getItem('guide-lang')||((navigator.language||'el').slice(0,2)==='el'?'el':'en');document.documentElement.lang=l}catch(e){}</script>
-  <title>Οδηγός περιοχής · Local guide | Tsiardaka Apartment</title>
+  <title>Οδηγός περιοχής · Local guide | 800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</title>
   <meta name="description" content="Ταβέρνες, αξιοθέατα και τηλέφωνα έκτακτης ανάγκης για τους επισκέπτες του Tsiardaka Apartment, Τρίκαλα.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#EEE7DC">
@@ -53,6 +53,9 @@
     .tav h3 small { font:500 .8rem 'Inter',sans-serif; color:var(--muted); letter-spacing:.02em; }
     .tav p { margin:0 0 .6rem; color:var(--muted); }
     .tav .btn { margin-top:auto; }
+    .tav .media { margin:-1.2rem -1.3rem .3rem; aspect-ratio:3/2; overflow:hidden; background:#d9cfc0; }
+    .tav .media img { width:100%; height:100%; object-fit:cover; display:block; }
+    .tav .credit { padding:0; margin:0 0 .4rem; }
     .sight .media { aspect-ratio:4/3; background:#d9cfc0; overflow:hidden; }
     .sight .media img { width:100%; height:100%; object-fit:cover; display:block; }
     .sight .tile { display:grid; place-items:center; background:linear-gradient(145deg,#d9c9b0,#bda27c); font-size:4rem; }
@@ -91,6 +94,7 @@
     footer { text-align:center; padding:2.6rem 0 1.4rem; color:var(--muted); font-size:.85rem; }
     footer .big { font:italic 500 1.5rem 'Playfair Display','Noto Serif',serif; color:var(--walnut); margin-bottom:.4rem; }
     footer a { text-underline-offset:3px; }
+    .pname { font-weight:600; color:var(--walnut); letter-spacing:.02em; margin-bottom:.15rem; }
     .fine { font-size:.72rem; opacity:.8; margin-top:1rem; }
 
     /* always-visible emergency button */
@@ -131,11 +135,13 @@
       <h3 class="group"><span data-l="el">Κοντά στο σπίτι</span><span data-l="en">Close to the apartment</span></h3>
       <div class="grid">
       <article class="card tav">
+        <div class="media"><picture><source type="image/webp" srcset="/images/guide/hani-480.webp 480w, /images/guide/hani-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/hani.jpg" alt="Το Χάνι" loading="lazy" width="1440" height="960"></picture></div><p class="credit">&copy; Το Χάνι</p>
         <h3>Το Χάνι<small data-l="en"> · To Hani</small></h3>
         <p><span data-l="el">Δίπλα στον Μύλο των Ξωτικών, λίγα λεπτά με τα πόδια από το σπίτι.</span><span data-l="en">Right next to the Elf Mill, a few minutes&#x27; walk from the apartment.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/AG91FDXFMUzAkjcT8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
+        
         <h3>Το Λαδοφάναρο<small data-l="en"> · To Ladofanaro</small></h3>
         <p><span data-l="el">Στα Μαναβικά, κοντά στην παλιά πόλη, περίπου 13 λεπτά με τα πόδια.</span><span data-l="en">In Manavika, near the old town, about 13 minutes on foot.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/4XSuwQ69EF11tLFXA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
@@ -144,16 +150,19 @@
       <h3 class="group"><span data-l="el">Λίγο πιο μακριά (καλύτερα με αυτοκίνητο)</span><span data-l="en">A little further (best by car)</span></h3>
       <div class="grid">
       <article class="card tav">
+        
         <h3>Αυλάκι<small data-l="en"> · Avlaki</small></h3>
         <p><span data-l="el">Ταβέρνα στη Φήκη.</span><span data-l="en">A tavern in Fiki.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/fphHHfmLjCvr1ddf6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
+        
         <h3>Ο Νιαβής<small data-l="en"> · O Niavis</small></h3>
         <p><span data-l="el">Ταβέρνα, λίγο πιο μακριά από το κέντρο.</span><span data-l="en">A tavern, a little further from the center.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/4ka1m1PGSXxQRLt5A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
+        
         <h3>Κεραμαριό<small data-l="en"> · Keramario</small></h3>
         <p><span data-l="el">Παραδοσιακή ταβέρνα και ξενώνες.</span><span data-l="en">Traditional tavern and guesthouses.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/vWtetogfiiS6iMgm7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
@@ -295,9 +304,9 @@
           <dt><span data-l="el">Οικοδεσπότης</span><span data-l="en">Host</span></dt>
           <dd><span data-l="el">Ζωή Τσιαρδάκα</span><span data-l="en">Zoi Tsiardaka</span></dd>
           <dt><span data-l="el">Τηλέφωνο</span><span data-l="en">Phone</span></dt>
-          <dd><a href="tel:+306987589044">+30 698 758 9044</a>
-              <a class="copy" style="text-decoration:none" href="https://wa.me/306987589044" target="_blank" rel="noopener">WhatsApp</a>
-              <a class="copy" style="text-decoration:none" href="viber://chat?number=%2B306987589044">Viber</a></dd>
+          <dd><a href="tel:+306936935079">+30 693 693 5079</a>
+              <a class="copy" style="text-decoration:none" href="https://wa.me/306936935079" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="copy" style="text-decoration:none" href="viber://chat?number=%2B306936935079">Viber</a></dd>
           <dt><span data-l="el">Διεύθυνση</span><span data-l="en">Address</span></dt>
           <dd><span id="addr">Αθηνάς Εργάνης 8, 42131 Τρίκαλα</span> <button class="copy" type="button" data-copy="addr"><span data-l="el">Αντιγραφή</span><span data-l="en">Copy</span></button></dd>
           <dt>Check-in / Check-out</dt>
@@ -312,8 +321,9 @@
 
   <footer><div class="wrap">
     <div class="big"><span data-l="el">Καλή διαμονή!</span><span data-l="en">Enjoy your stay!</span></div>
+    <div class="pname">800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</div>
     <div><a href="https://tsiardaka-apartment.gr/">tsiardaka-apartment.gr</a></div>
-    <div class="fine"><span data-l="el">Οι αποστάσεις είναι κατά προσέγγιση. Φωτογραφίες: Wikimedia Commons (δείτε τις αναφορές στις κάρτες).</span><span data-l="en">Distances are approximate. Photos: Wikimedia Commons (see the credits on the cards).</span></div>
+    <div class="fine"><span data-l="el">Οι αποστάσεις είναι κατά προσέγγιση. Φωτογραφίες: Wikimedia Commons και Το Χάνι (δείτε τις αναφορές στις κάρτες).</span><span data-l="en">Distances are approximate. Photos: Wikimedia Commons and To Hani (see the credits on the cards).</span></div>
   </div></footer>
 
   <a class="sos-fab" href="tel:112" aria-label="Call 112"><span aria-hidden="true">🆘</span><span><span data-l="el">Έκτακτη ανάγκη 112</span><span data-l="en">Emergency 112</span></span></a>
