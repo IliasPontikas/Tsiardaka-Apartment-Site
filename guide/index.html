@@ -34,6 +34,7 @@
     /* hero */
     .hero { text-align:center; padding:2.6rem 0 1.4rem; }
     .hero .kicker { font-size:.74rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+    .pname-top { margin-top:.35rem; font-weight:600; font-size:.95rem; color:var(--walnut); letter-spacing:.02em; }
     .hero h1 { font-size:clamp(2rem,7vw,3.2rem); font-style:italic; font-weight:500; margin:.5rem 0 .8rem; color:var(--walnut); }
     .hero p { margin:0 auto; max-width:34rem; color:var(--muted); }
     .nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem; margin:1.6rem 0 0; }
@@ -119,6 +120,7 @@
   <main>
     <div class="wrap hero">
       <div class="kicker">Tsiardaka Apartment · <span data-l="el">Τρίκαλα</span><span data-l="en">Trikala</span></div>
+      <div class="pname-top">800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</div>
       <h1><span data-l="el">Καλώς ήρθατε στα Τρίκαλα</span><span data-l="en">Welcome to Trikala</span></h1>
       <p><span data-l="el">Ο μικρός μας οδηγός της περιοχής: πού να φάτε, τι να δείτε και ποιους αριθμούς να έχετε πάντα πρόχειρους.</span><span data-l="en">Our little guide to the area: where to eat, what to see, and the numbers to keep at hand.</span></p>
       <nav class="nav" aria-label="Sections">
@@ -141,7 +143,7 @@
         <a class="btn" href="https://maps.app.goo.gl/AG91FDXFMUzAkjcT8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
-        
+        <div class="media"><picture><source type="image/webp" srcset="/images/guide/ladofanaro-480.webp 480w, /images/guide/ladofanaro-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/ladofanaro.jpg" alt="Το Λαδοφάναρο" loading="lazy" width="1200" height="1200"></picture></div>
         <h3>Το Λαδοφάναρο<small data-l="en"> · To Ladofanaro</small></h3>
         <p><span data-l="el">Στα Μαναβικά, κοντά στην παλιά πόλη, περίπου 13 λεπτά με τα πόδια.</span><span data-l="en">In Manavika, near the old town, about 13 minutes on foot.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/4XSuwQ69EF11tLFXA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
@@ -150,19 +152,19 @@
       <h3 class="group"><span data-l="el">Λίγο πιο μακριά (καλύτερα με αυτοκίνητο)</span><span data-l="en">A little further (best by car)</span></h3>
       <div class="grid">
       <article class="card tav">
-        
+        <div class="media"><picture><source type="image/webp" srcset="/images/guide/avlaki-480.webp 480w, /images/guide/avlaki-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/avlaki.jpg" alt="Αυλάκι" loading="lazy" width="1200" height="1096"></picture></div>
         <h3>Αυλάκι<small data-l="en"> · Avlaki</small></h3>
         <p><span data-l="el">Ταβέρνα στη Φήκη.</span><span data-l="en">A tavern in Fiki.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/fphHHfmLjCvr1ddf6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
-        
+        <div class="media"><picture><source type="image/webp" srcset="/images/guide/niavis-480.webp 480w, /images/guide/niavis-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/niavis.jpg" alt="Ο Νιαβής" loading="lazy" width="1024" height="768"></picture></div>
         <h3>Ο Νιαβής<small data-l="en"> · O Niavis</small></h3>
-        <p><span data-l="el">Ταβέρνα, λίγο πιο μακριά από το κέντρο.</span><span data-l="en">A tavern, a little further from the center.</span></p>
+        <p><span data-l="el">Ταβέρνα στο Νεραϊδοχώρι.</span><span data-l="en">A tavern in Neraidochori.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/4ka1m1PGSXxQRLt5A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
       </article>
 <article class="card tav">
-        
+        <div class="media"><picture><source type="image/webp" srcset="/images/guide/keramario-480.webp 480w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/keramario.jpg" alt="Κεραμαριό" loading="lazy" width="550" height="413"></picture></div>
         <h3>Κεραμαριό<small data-l="en"> · Keramario</small></h3>
         <p><span data-l="el">Παραδοσιακή ταβέρνα και ξενώνες.</span><span data-l="en">Traditional tavern and guesthouses.</span></p>
         <a class="btn" href="https://maps.app.goo.gl/vWtetogfiiS6iMgm7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
@@ -176,7 +178,7 @@
       <p class="lead"><span data-l="el">Από βόλτες με τα πόδια στο κέντρο μέχρι εκδρομές στη φύση.</span><span data-l="en">From walks in the center to day trips into nature.</span></p>
       <div class="grid">
       <article class="card sight" id="mylos">
-        <div class="media tile" aria-hidden="true"><span>🎄</span></div>
+        <div class="media"><img src="/images/attractions/mylos/panoramic-800.webp" alt="Μύλος των Ξωτικών - Elf Mill" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
         <div class="body">
           <h3><span data-l="el">Μύλος των Ξωτικών</span><span data-l="en">Elf Mill</span></h3>
           <p class="chip">🚶 <span data-l="el">9 λεπτά με τα πόδια</span><span data-l="en">9 min on foot</span></p>
@@ -194,7 +196,7 @@
         </div>
       </article>
 <article class="card sight" id="manavika">
-        <div class="media tile" aria-hidden="true"><span>🍽️</span></div>
+        <div class="media"><img src="/images/attractions/manavika/tavernes-800.webp" alt="Μαναβικά - Manavika" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
         <div class="body">
           <h3><span data-l="el">Μαναβικά</span><span data-l="en">Manavika</span></h3>
           <p class="chip">🚶 <span data-l="el">13 λεπτά με τα πόδια</span><span data-l="en">13 min on foot</span></p>
@@ -230,7 +232,7 @@
         </div>
       </article>
 <article class="card sight" id="pertouli">
-        <div class="media tile" aria-hidden="true"><span>⛷️</span></div>
+        <div class="media"><img src="/images/attractions/pertouli/xionodromiko-800.webp" alt="Πετρούλι - Pertouli" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
         <div class="body">
           <h3><span data-l="el">Πετρούλι</span><span data-l="en">Pertouli</span></h3>
           <p class="chip">🚗 <span data-l="el">50 λεπτά με αυτοκίνητο</span><span data-l="en">50 min by car</span></p>
@@ -239,7 +241,7 @@
         </div>
       </article>
 <article class="card sight" id="plastira">
-        <div class="media tile" aria-hidden="true"><span>🏞️</span></div>
+        <div class="media"><img src="/images/attractions/limni-plastira/limni_plastira-800.webp" alt="Λίμνη Πλαστήρα - Plastira Lake" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
         <div class="body">
           <h3><span data-l="el">Λίμνη Πλαστήρα</span><span data-l="en">Plastira Lake</span></h3>
           <p class="chip">🚗 <span data-l="el">1 ώρα με αυτοκίνητο</span><span data-l="en">1 hour by car</span></p>
