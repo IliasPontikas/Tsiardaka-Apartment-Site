@@ -1,0 +1,45 @@
+name: Update weather
+
+# Builds weather.json (5-day forecast) from MET Norway's Locationforecast API (licence CC BY 4.0).
+# MET asks every client to identify itself and not to ask too often, so this job asks a few times a day
+# and visitors read the small weather.json from this site instead of calling MET themselves.
+on:
+  schedule:
+    - cron: '41 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weather
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build weather.json
+        run: node tools/fetch-weather.mjs weather.json
+
+      - name: Commit if the forecast changed
+        run: |
+          # ignore the "updated" timestamp when deciding whether anything changed
+          if git diff --quiet -I'"updated"' -- weather.json; then
+            echo "No forecast changes"
+          else
+            git config user.name "weather-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add weather.json
+            git commit -m "chore: update weather forecast (MET Norway)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

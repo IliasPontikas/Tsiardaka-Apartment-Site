@@ -66,7 +66,7 @@ const translations = {
         "attractions.square.title": "Κεντρική Πλατεία και Ποτάμι",
         "attractions.square.desc": "Το κέντρο στα πόδια σου. Το ποτάμι διασχίζει την χριστουγεννιάτικη πόλη δίπλα στο σπίτι.",
         "attractions.square.distance": "9 λεπτά",
-        "attractions.oldtown.title": "Παλιά Πόλη και Φρούρειο",
+        "attractions.oldtown.title": "Παλιά Πόλη και Φρούριο",
         "attractions.oldtown.desc": "Παραδοσιακά αρχοντικά και γραφικά σοκάκια. Ιδανική για βόλτες και φωτογραφίες.",
         "attractions.oldtown.distance": "17 λεπτά",
         "attractions.manavika.title": "Μαναβικά",
@@ -88,6 +88,7 @@ const translations = {
         "location.nearby": "Κοντινά Σημεία Ενδιαφέροντος",
         "weather.title": "Καιρός στα Τρίκαλα",
         "weather.loading": "Φόρτωση...",
+        "weather.credit": "Δεδομένα καιρού:",
         "weather.feelsLike": "Αίσθηση",
         "weather.humidity": "Υγρασία",
         "weather.wind": "Άνεμος",
@@ -158,7 +159,7 @@ const translations = {
         "info.label": "Καλό να ξέρετε",
         "info.title": "Πληροφορίες διαμονής",
         "info.c1.title": "Check-in / Check-out",
-        "info.c1.text": "Check-in: 15:00 - 20:00. Παρακαλούμε ενημερώστε μας εκ των προτέρων για την ώρα άφιξής σας. Check-out: έως τις 12:00, αλλά εάν υπάρχει η δυνατότητα επιλέγετε εσείς την ώρα.",
+        "info.c1.text": "Check-in: 15:00 - 20:00. Παρακαλούμε ενημερώστε μας εκ των προτέρων για την ώρα άφιξής σας. Check-out: έως τις 11:00, αλλά εάν υπάρχει η δυνατότητα επιλέγετε εσείς την ώρα.",
         "info.c2.title": "Παιδιά και βρεφικές κούνιες",
         "info.c2.text": "Γίνονται δεκτά παιδιά όλων των ηλικιών. Βρεφική κούνια (0 - 3 ετών) διατίθεται κατόπιν αιτήματος.",
         "info.c3.title": "Κανόνες σπιτιού",
@@ -219,7 +220,9 @@ const translations = {
         "faq.a6": "Ελληνικά και Αγγλικά.",
         "faq.q7": "Τι αξίζει να δω γύρω από τα Τρίκαλα;",
         "faq.a7": "Με το αυτοκίνητο: τα Μετέωρα (περίπου 29 λεπτά), το Πετρούλι (περίπου 50 λεπτά) και η Λίμνη Πλαστήρα (περίπου 1 ώρα).",
-        "footer.privacy": "Πολιτική Απορρήτου"
+        "footer.privacy": "Πολιτική Απορρήτου",
+        "footer.cookies": "Ρυθμίσεις cookies",
+        "credit.cropped": "(περικοπή)"
     },
 
     en: {
@@ -307,6 +310,7 @@ const translations = {
         "location.nearby": "Nearby Points of Interest",
         "weather.title": "Weather in Trikala",
         "weather.loading": "Loading...",
+        "weather.credit": "Weather data:",
         "weather.feelsLike": "Feels like",
         "weather.humidity": "Humidity",
         "weather.wind": "Wind",
@@ -377,7 +381,7 @@ const translations = {
         "info.label": "Good to know",
         "info.title": "Stay information",
         "info.c1.title": "Check-in / Check-out",
-        "info.c1.text": "Check-in: 3:00 pm - 8:00 pm. Please let us know your arrival time in advance. Check-out: Until 12:00, but if possible, you can choose your check-out time.",
+        "info.c1.text": "Check-in: 3:00 pm - 8:00 pm. Please let us know your arrival time in advance. Check-out: Until 11:00, but if possible, you can choose your check-out time.",
         "info.c2.title": "Children and cots",
         "info.c2.text": "Children of all ages are welcome. A baby cot (ages 0 - 3) is available on request.",
         "info.c3.title": "House rules",
@@ -438,7 +442,9 @@ const translations = {
         "faq.a6": "Greek and English.",
         "faq.q7": "What should I see around Trikala?",
         "faq.a7": "By car: Meteora (about 29 minutes), Pertouli (about 50 minutes) and Lake Plastira (about 1 hour).",
-        "footer.privacy": "Privacy Policy"
+        "footer.privacy": "Privacy Policy",
+        "footer.cookies": "Cookie settings",
+        "credit.cropped": "(cropped)"
     }
 };
 

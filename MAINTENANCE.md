@@ -73,6 +73,24 @@ If a platform does not put some closed days in its calendar link (for example a 
 In the Actions run, the note "Calendar contents" shows what the Airbnb link really contained.
 Optional: add a second GitHub secret `BOOKING_ICS_URL` (Booking.com calendar link) and both calendars are merged.
 
+## Guest guide (tourist guide for guests)
+
+A separate page at `https://tsiardaka-apartment.gr/guide/` (file `guide/index.html`). It is not in the site menu, not in the sitemap and
+has `noindex`, so only people who get the link or the QR code see it. QR code files are in the `promo/` folder (`guide-qr.png`, `guide-qr.svg`, printable card `guide-qr-card-A6.png`).
+- **Add a tavern:** in `guide/index.html` copy one `<article class="card tav"> ... </article>` block (in the group "Close to the apartment" or "A little further"), change the name, the two texts (`data-l="el"` Greek, `data-l="en"` English) and the Google Maps link.
+- **Phone numbers / host / AMA:** search `id="emergency"` in the same file.
+- Push as usual (`git add -A`, `git commit`, `git pull --rebase origin main`, `git push origin main`). The QR code never changes, because it points to the address.
+
+## Weather
+
+The 5-day forecast comes from MET Norway (free, credit "MET Norway · CC BY 4.0" is shown under the widget - keep it).
+A GitHub job (Actions -> "Update weather") collects it every 3 hours into `weather.json`; visitors never call MET directly.
+To refresh now: Actions -> Update weather -> Run workflow.
+
+## Fonts
+
+Fonts are in `fonts/` and loaded from this site (not from Google), so no visitor data goes to Google Fonts.
+
 ## Seasonal checklist (do this each season)
 
 - Check the New Year offer dates and prices.

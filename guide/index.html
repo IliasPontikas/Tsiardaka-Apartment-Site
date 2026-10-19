@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=localStorage.getItem('guide-lang')||((navigator.language||'el').slice(0,2)==='el'?'el':'en');document.documentElement.lang=l}catch(e){}</script>
+  <title>Οδηγός περιοχής · Local guide | 800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</title>
+  <meta name="description" content="Ταβέρνες, αξιοθέατα και τηλέφωνα έκτακτης ανάγκης για τους επισκέπτες του Tsiardaka Apartment, Τρίκαλα.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#EEE7DC">
+  <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <style>
+    :root { --cream:#EEE7DC; --paper:#FBF8F3; --ink:#3A2F28; --muted:#6B5C50; --walnut:#5A4637; --accent:#B8863F; --line:rgba(90,70,55,.16); --sos:#B3261E; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:76px; }
+    body { margin:0; background:var(--cream); color:var(--ink); font:400 1rem/1.6 'Inter',system-ui,sans-serif; -webkit-text-size-adjust:100%; padding-bottom:92px; }
+    h1,h2,h3 { font-family:'Playfair Display','Noto Serif',Georgia,serif; line-height:1.2; margin:0; }
+    a { color:inherit; }
+    [data-l] { display:none; }
+    html[lang="el"] [data-l="el"], html[lang="en"] [data-l="en"] { display:inline; }
+    .wrap { width:min(100% - 2rem, 980px); margin-inline:auto; }
+
+    /* top bar */
+    .top { position:sticky; top:0; z-index:20; background:rgba(238,231,220,.92); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+    .top .wrap { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.55rem 0; }
+    .top img { height:38px; width:auto; display:block; }
+    .top .logo { display:block; line-height:0; }
+    .lang { display:flex; gap:.25rem; background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:.2rem; }
+    .lang button { font:600 .78rem 'Inter',sans-serif; letter-spacing:.06em; border:0; background:none; color:var(--muted); padding:.4rem .8rem; border-radius:999px; cursor:pointer; min-height:34px; }
+    html[lang="el"] .lang [data-set="el"], html[lang="en"] .lang [data-set="en"] { background:var(--walnut); color:#fff; }
+
+    /* hero */
+    .hero { text-align:center; padding:2.6rem 0 1.4rem; }
+    .hero .kicker { font-size:.74rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+    .pname-top { margin-top:.35rem; font-weight:600; font-size:.95rem; color:var(--walnut); letter-spacing:.02em; }
+    .hero h1 { font-size:clamp(2rem,7vw,3.2rem); font-style:italic; font-weight:500; margin:.5rem 0 .8rem; color:var(--walnut); }
+    .hero p { margin:0 auto; max-width:34rem; color:var(--muted); }
+    .nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem; margin:1.6rem 0 0; }
+    .nav a { text-decoration:none; font-weight:600; font-size:.9rem; padding:.65rem 1.1rem; border-radius:999px; background:var(--paper); border:1px solid var(--line); min-height:44px; display:inline-flex; align-items:center; }
+    .nav a.alert { background:var(--sos); color:#fff; border-color:var(--sos); }
+
+    section { padding:2.6rem 0 .6rem; }
+    .kicker2 { font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    h2 { font-size:clamp(1.6rem,5vw,2.2rem); margin:.3rem 0 .4rem; color:var(--walnut); }
+    .lead { margin:0 0 1.4rem; color:var(--muted); max-width:38rem; }
+    h3.group { font:700 .8rem 'Inter',sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:1.8rem 0 .8rem; padding-bottom:.5rem; border-bottom:1px solid var(--line); }
+
+    .grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); }
+    .card { background:var(--paper); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 8px 24px -16px rgba(60,40,25,.35); }
+    .tav { padding:1.2rem 1.3rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; }
+    .tav h3 { font-size:1.3rem; }
+    .tav h3 small { font:500 .8rem 'Inter',sans-serif; color:var(--muted); letter-spacing:.02em; }
+    .tav p { margin:0 0 .6rem; color:var(--muted); }
+    .tav .btn { margin-top:auto; }
+    .tav .media { margin:-1.2rem -1.3rem .3rem; aspect-ratio:3/2; overflow:hidden; background:#d9cfc0; }
+    .tav .media img { width:100%; height:100%; object-fit:cover; display:block; }
+    .tav .media.logo { background:#fff; }
+    .tav .media.logo img { object-fit:contain; padding:.6rem; }
+    .banner { position:relative; height:clamp(150px,26vw,230px); border-radius:16px; overflow:hidden; margin:2.2rem 0 1rem; background:#0f2a1c; }
+    .banner img { width:100%; height:100%; object-fit:cover; object-position:50% 40%; display:block; }
+    .banner::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,24,16,.78), rgba(10,24,16,.1) 65%); }
+    .banner-text { position:absolute; z-index:2; left:1.3rem; bottom:1rem; color:#fff; }
+    .banner-text h3 { font-size:clamp(1.5rem,5vw,2.1rem); color:#fff; }
+    .banner-text p { margin:.1rem 0 0; font-size:.9rem; opacity:.9; }
+    .tav .credit { padding:0; margin:0 0 .4rem; }
+    .sight .media { aspect-ratio:4/3; background:#d9cfc0; overflow:hidden; }
+    .sight .media img { width:100%; height:100%; object-fit:cover; display:block; }
+    .sight .tile { display:grid; place-items:center; background:linear-gradient(145deg,#d9c9b0,#bda27c); font-size:4rem; }
+    .credit { margin:0; padding:.4rem 1.2rem 0; font-size:.68rem; color:var(--muted); }
+    .sight .body { padding:.9rem 1.3rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; }
+    .sight h3 { font-size:1.25rem; }
+    .sight p { margin:0; color:var(--muted); }
+    p.chip { align-self:flex-start; font-size:.82rem; font-weight:600; color:var(--walnut) !important; background:rgba(184,134,63,.16); padding:.2rem .7rem; border-radius:999px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; align-self:flex-start; text-decoration:none; font-weight:600; font-size:.9rem; padding:.7rem 1.1rem; border-radius:999px; border:1.5px solid var(--walnut); color:var(--walnut); min-height:44px; margin-top:.4rem; transition:background .2s,color .2s; }
+    .btn:hover { background:var(--walnut); color:#fff; }
+
+    /* stay info */
+    .card.info { padding:1.2rem 1.3rem 1.3rem; }
+    .card.info h3 { font-size:1.25rem; margin-bottom:.8rem; }
+    .card.info dl { display:grid; grid-template-columns:auto 1fr; gap:.5rem 1rem; margin:0; align-items:center; }
+    .card.info dt { color:var(--muted); font-size:.85rem; }
+    .card.info dd { margin:0; font-weight:600; display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+    .rules { list-style:none; margin:0; padding:0; display:grid; gap:.8rem; }
+    .rules li { display:flex; gap:.7rem; align-items:flex-start; color:var(--ink); }
+    .rules .ri { font-size:1.3rem; line-height:1.3; }
+    #stay { padding-top:1.2rem; }
+    #stay h2 { margin-bottom:1.1rem; }
+
+    /* emergency */
+    #emergency { padding-bottom:1rem; }
+    #emergency .grid { margin-bottom:.4rem; }
+    .sos-list { display:grid; gap:.7rem; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); }
+    .sos { display:flex; align-items:center; gap:.9rem; text-decoration:none; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:.9rem 1.1rem; min-height:68px; }
+    .sos-ico { flex:0 0 42px; height:42px; border-radius:50%; background:rgba(90,70,55,.1); display:grid; place-items:center; color:var(--walnut); }
+    .sos-txt { display:flex; flex-direction:column; flex:1; line-height:1.3; }
+    .sos-txt small { color:var(--muted); font-size:.8rem; }
+    .sos-num { font:700 1.35rem 'Inter',sans-serif; letter-spacing:.02em; color:var(--walnut); }
+    .sos.split { flex-direction:column; align-items:stretch; gap:.4rem; padding:0; background:var(--paper); }
+    .sos.split .sos-main { display:flex; align-items:center; gap:.9rem; text-decoration:none; padding:.9rem 1.1rem .3rem; min-height:68px; }
+    .sos.split .btn { margin:.2rem 1.1rem 1rem; }
+    .sos.red { background:var(--sos); border-color:var(--sos); color:#fff; }
+    .sos.red .sos-ico { background:rgba(255,255,255,.2); color:#fff; }
+    .sos.red small, .sos.red .sos-num { color:#fff; }
+    .home { margin-top:1.6rem; background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:1.3rem 1.4rem; }
+    .home h3 { font-size:1.25rem; margin-bottom:.8rem; }
+    .home dl { display:grid; grid-template-columns:auto 1fr; gap:.55rem 1rem; margin:0; align-items:center; }
+    .home dt { color:var(--muted); font-size:.85rem; }
+    .home dd { margin:0; font-weight:600; display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+    .copy { font:600 .75rem 'Inter',sans-serif; border:1px solid var(--line); background:var(--cream); color:var(--walnut); padding:.3rem .7rem; border-radius:999px; cursor:pointer; min-height:32px; }
+    .copy.done { background:var(--walnut); color:#fff; }
+    .hint { font-size:.85rem; color:var(--muted); margin:.9rem 0 0; }
+
+    footer { text-align:center; padding:2.6rem 0 1.4rem; color:var(--muted); font-size:.85rem; }
+    footer .big { font:italic 500 1.5rem 'Playfair Display','Noto Serif',serif; color:var(--walnut); margin-bottom:.4rem; }
+    footer a { text-underline-offset:3px; }
+    .pname { font-weight:600; color:var(--walnut); letter-spacing:.02em; margin-bottom:.15rem; }
+    .fine { font-size:.72rem; opacity:.8; margin-top:1rem; }
+
+    /* always-visible emergency button */
+    .sos-fab { position:fixed; right:1rem; bottom:1rem; z-index:30; display:flex; align-items:center; gap:.55rem; background:var(--sos); color:#fff; text-decoration:none; font-weight:700; padding:.85rem 1.2rem; border-radius:999px; box-shadow:0 10px 26px -8px rgba(179,38,30,.7); min-height:52px; }
+    .sos-fab span:last-child { font-size:.95rem; letter-spacing:.02em; }
+    @media (max-width:520px) { .home dl { grid-template-columns:1fr; gap:.1rem; } .home dd { margin-bottom:.7rem; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  </style>
+</head>
+<body id="top">
+  <header class="top">
+    <div class="wrap">
+      <a href="#top" class="logo" aria-label="Back to top"><img src="/images/logo-removebg-480.webp" alt="Tsiardaka Apartment" width="95" height="38"></a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set="el">EL</button>
+        <button type="button" data-set="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="kicker">Tsiardaka Apartment · <span data-l="el">Τρίκαλα</span><span data-l="en">Trikala</span></div>
+      <div class="pname-top">800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</div>
+      <h1><span data-l="el">Καλώς ήρθατε στα Τρίκαλα</span><span data-l="en">Welcome to Trikala</span></h1>
+      <p><span data-l="el">Ο μικρός μας οδηγός της περιοχής: πού να φάτε, τι να δείτε και ποιους αριθμούς να έχετε πάντα πρόχειρους.</span><span data-l="en">Our little guide to the area: where to eat, what to see, and the numbers to keep at hand.</span></p>
+      <nav class="nav" aria-label="Sections">
+        <a href="#stay">📶 <span data-l="el">Wi-Fi & κανόνες</span><span data-l="en">Wi-Fi & rules</span></a>
+        <a href="#taverns">🍽️ <span data-l="el">Ταβέρνες</span><span data-l="en">Taverns</span></a>
+        <a href="#sights">📍 <span data-l="el">Αξιοθέατα</span><span data-l="en">Sights</span></a>
+        <a href="#emergency" class="alert">🆘 <span data-l="el">Έκτακτη ανάγκη</span><span data-l="en">Emergency</span></a>
+      </nav>
+    </div>
+
+    <section id="stay"><div class="wrap">
+      <div class="kicker2"><span data-l="el">Η διαμονή σας</span><span data-l="en">Your stay</span></div>
+      <h2><span data-l="el">Wi-Fi και κανόνες του σπιτιού</span><span data-l="en">Wi-Fi and house rules</span></h2>
+      <div class="grid stay">
+        <article class="card info">
+          <h3>📶 Wi-Fi</h3>
+          <dl>
+            <dt><span data-l="el">Δίκτυο</span><span data-l="en">Network</span></dt>
+            <dd>Huawei…Cm7</dd>
+            <dt><span data-l="el">Κωδικός</span><span data-l="en">Password</span></dt>
+            <dd><span id="wifipw">800steps</span> <button class="copy" type="button" data-copy="wifipw"><span data-l="el">Αντιγραφή</span><span data-l="en">Copy</span></button></dd>
+          </dl>
+        </article>
+        <article class="card info">
+          <h3>🕒 Check-in / Check-out</h3>
+          <dl>
+            <dt>Check-in</dt><dd><span data-l="el">από τις 15:00</span><span data-l="en">from 15:00</span></dd>
+            <dt>Check-out</dt><dd><span data-l="el">έως τις 11:00</span><span data-l="en">by 11:00</span></dd>
+          </dl>
+        </article>
+        <article class="card info">
+          <h3>📋 <span data-l="el">Κανόνες καταλύματος</span><span data-l="en">Apartment rules</span></h3>
+          <ul class="rules">
+            <li><span class="ri">🚭</span><span><span data-l="el">Το κάπνισμα δεν επιτρέπεται στο εσωτερικό.</span><span data-l="en">Smoking is not allowed inside.</span></span></li>
+            <li><span class="ri">🤫</span><span><span data-l="el">Παρακαλούμε τηρείτε τις ώρες κοινής ησυχίας: 15:30–17:30 και 22:00–07:30.</span><span data-l="en">Please respect the quiet hours: 15:30–17:30 and 22:00–07:30.</span></span></li>
+          </ul>
+        </article>
+      </div>
+    </div></section>
+
+    <section id="taverns"><div class="wrap">
+      <div class="kicker2"><span data-l="el">Φαγητό</span><span data-l="en">Eat</span></div>
+      <h2><span data-l="el">Ταβέρνες</span><span data-l="en">Taverns</span></h2>
+      <p class="lead"><span data-l="el">Οι δικές μας προτάσεις. Πατήστε το κουμπί για να ανοίξει ο χάρτης και η διαδρομή.</span><span data-l="en">Our own picks. Tap the button to open the map and directions.</span></p>
+      <h3 class="group"><span data-l="el">Κοντά στο σπίτι</span><span data-l="en">Close to the apartment</span></h3>
+      <div class="grid">
+      <article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/hani-480.webp 480w, /images/guide/hani-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/hani.jpg" alt="Το Χάνι" loading="lazy" width="1440" height="960"></picture></div><p class="credit">&copy; Το Χάνι</p>
+        <h3>Το Χάνι<small data-l="en"> · To Hani</small></h3>
+        <p><span data-l="el">Δίπλα στον Μύλο των Ξωτικών, λίγα λεπτά με τα πόδια από το σπίτι.</span><span data-l="en">Right next to the Elf Mill, a few minutes&#x27; walk from the apartment.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/AG91FDXFMUzAkjcT8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+<article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/ladofanaro-480.webp 480w, /images/guide/ladofanaro-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/ladofanaro.jpg" alt="Το Λαδοφάναρο" loading="lazy" width="1200" height="1200"></picture></div>
+        <h3>Το Λαδοφάναρο<small data-l="en"> · To Ladofanaro</small></h3>
+        <p><span data-l="el">Στα Μαναβικά, κοντά στην παλιά πόλη, περίπου 13 λεπτά με τα πόδια.</span><span data-l="en">In Manavika, near the old town, about 13 minutes on foot.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/4XSuwQ69EF11tLFXA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+      </div>
+      <h3 class="group"><span data-l="el">Λίγο πιο μακριά (με αυτοκίνητο)</span><span data-l="en">A little further (by car)</span></h3>
+      <div class="grid">
+      <article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/avlaki-480.webp 480w, /images/guide/avlaki-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/avlaki.jpg" alt="Αυλάκι" loading="lazy" width="1200" height="1096"></picture></div>
+        <h3>Αυλάκι<small data-l="en"> · Avlaki</small></h3>
+        <p><span data-l="el">Ταβέρνα στη Φήκη.</span><span data-l="en">A tavern in Fiki.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/fphHHfmLjCvr1ddf6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+<article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/angelis-480.webp 480w, /images/guide/angelis-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/angelis.jpg" alt="Αγγέλης" loading="lazy" width="1200" height="800"></picture></div>
+        <h3>Αγγέλης<small data-l="en"> · Angelis</small></h3>
+        <p><span data-l="el">Ταβέρνα στη Φήκη.</span><span data-l="en">A tavern in Fiki.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/1GwJXg8zcf4sR5Pi6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+<article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/niavis-480.webp 480w, /images/guide/niavis-800.webp 800w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/niavis.jpg" alt="Ο Νιαβής" loading="lazy" width="1024" height="768"></picture></div>
+        <h3>Ο Νιαβής<small data-l="en"> · O Niavis</small></h3>
+        <p><span data-l="el">Ταβέρνα στο Νεραϊδοχώρι.</span><span data-l="en">A tavern in Neraidochori.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/4ka1m1PGSXxQRLt5A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+<article class="card tav">
+        <div class="media "><picture><source type="image/webp" srcset="/images/guide/keramario-480.webp 480w" sizes="(max-width:600px) 100vw, 320px"><img src="/images/guide/keramario.jpg" alt="Κεραμαριό" loading="lazy" width="550" height="413"></picture></div>
+        <h3>Κεραμαριό<small data-l="en"> · Keramario</small></h3>
+        <p><span data-l="el">Παραδοσιακή ταβέρνα και ξενώνες.</span><span data-l="en">Traditional tavern and guesthouses.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/vWtetogfiiS6iMgm7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+      </div>
+    </div></section>
+
+    <section id="sights"><div class="wrap">
+      <div class="kicker2"><span data-l="el">Εξερευνήστε</span><span data-l="en">Explore</span></div>
+      <h2><span data-l="el">Αξιοθέατα</span><span data-l="en">Sights</span></h2>
+      <p class="lead"><span data-l="el">Από βόλτες με τα πόδια στο κέντρο μέχρι εκδρομές στη φύση.</span><span data-l="en">From walks in the center to day trips into nature.</span></p>
+      <div class="grid">
+      <article class="card sight" id="mylos">
+        <div class="media"><img src="/images/attractions/mylos/panoramic-800.webp" alt="Μύλος των Ξωτικών - Elf Mill" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
+        <div class="body">
+          <h3><span data-l="el">Μύλος των Ξωτικών</span><span data-l="en">Elf Mill</span></h3>
+          <p class="chip">🚶 <span data-l="el">9 λεπτά με τα πόδια</span><span data-l="en">9 min on foot</span></p>
+          <p><span data-l="el">Ένα μαγευτικό χριστουγεννιάτικο χωριό που μαγεύει μικρούς και μεγάλους.</span><span data-l="en">A magical Christmas village that enchants young and old.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=39.54642843380996,21.75882452615013" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="square">
+        <div class="media"><img src="/images/attractions/square-river/lithaios-commons-800.webp" alt="Κεντρική Πλατεία και Ποτάμι - Central Square and River" loading="lazy" width="800" height="600"></div><p class="credit">© <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">C messier</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+        <div class="body">
+          <h3><span data-l="el">Κεντρική Πλατεία και Ποτάμι</span><span data-l="en">Central Square and River</span></h3>
+          <p class="chip">🚶 <span data-l="el">9 λεπτά με τα πόδια</span><span data-l="en">9 min on foot</span></p>
+          <p><span data-l="el">Το κέντρο στα πόδια σου. Το ποτάμι διασχίζει την πόλη δίπλα στο σπίτι.</span><span data-l="en">The center at your feet. The river crosses the town next to the apartment.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=39.55615671060874,21.767885668478698" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="manavika">
+        <div class="media"><img src="/images/attractions/manavika/tavernes-800.webp" alt="Μαναβικά - Manavika" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
+        <div class="body">
+          <h3><span data-l="el">Μαναβικά</span><span data-l="en">Manavika</span></h3>
+          <p class="chip">🚶 <span data-l="el">13 λεπτά με τα πόδια</span><span data-l="en">13 min on foot</span></p>
+          <p><span data-l="el">Ταβέρνες κοντά στην παλιά πόλη με απίστευτες γεύσεις.</span><span data-l="en">Taverns near the old town with incredible flavors.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=39.55758069595936,21.766265246459696" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="oldtown">
+        <div class="media"><img src="/images/attractions/old-town/froureio-commons-800.webp" alt="Παλιά Πόλη και Φρούριο - Old Town and Fortress" loading="lazy" width="800" height="600"></div><p class="credit">© <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Τόμμυ (el.wikipedia)</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener">CC BY-SA 2.5</a></p>
+        <div class="body">
+          <h3><span data-l="el">Παλιά Πόλη και Φρούριο</span><span data-l="en">Old Town and Fortress</span></h3>
+          <p class="chip">🚶 <span data-l="el">17 λεπτά με τα πόδια</span><span data-l="en">17 min on foot</span></p>
+          <p><span data-l="el">Παραδοσιακά αρχοντικά και γραφικά σοκάκια. Ιδανική για βόλτες και φωτογραφίες.</span><span data-l="en">Traditional mansions and picturesque alleys. Ideal for walks and photos.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=39.55792216516003,21.76285322429936" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="meteora">
+        <div class="media"><img src="/images/attractions/meteora/meteora-commons-800.webp" alt="Μετέωρα - Meteora" loading="lazy" width="800" height="600"></div><p class="credit">© <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Jolovema</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+        <div class="body">
+          <h3><span data-l="el">Μετέωρα</span><span data-l="en">Meteora</span></h3>
+          <p class="chip">🚗 <span data-l="el">29 λεπτά με αυτοκίνητο</span><span data-l="en">29 min by car</span></p>
+          <p><span data-l="el">Μοναδική μοναστική πολιτεία στην κορυφή βράχων. Μνημείο UNESCO.</span><span data-l="en">Unique monastic city on top of rocks. UNESCO World Heritage Site.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Meteora%2C+Greece" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="palaiokarya">
+        <div class="media"><img src="/images/attractions/palaiokarya/palaiokarya-commons-800.webp" alt="Καταρράκτες Παλαιοκαρυάς - Palaiokarya Waterfalls" loading="lazy" width="800" height="600"></div><p class="credit">© <a href="https://commons.wikimedia.org/wiki/File:Waterfall_in_Palaiokarya_-_Trikala,_Greece.jpg" target="_blank" rel="noopener">Dimitris9444</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> (cropped)</p>
+        <div class="body">
+          <h3><span data-l="el">Καταρράκτες Παλαιοκαρυάς</span><span data-l="en">Palaiokarya Waterfalls</span></h3>
+          <p class="chip">🚗 <span data-l="el">35 λεπτά με αυτοκίνητο</span><span data-l="en">35 min by car</span></p>
+          <p><span data-l="el">Το πέτρινο τοξωτό γεφύρι της Παλαιοκαρυάς, με δύο μικρούς καταρράκτες δίπλα του.</span><span data-l="en">The stone arched bridge of Palaiokarya, with two small waterfalls beside it.</span></p>
+          <a class="btn" href="https://maps.app.goo.gl/FXDYN2ND2Z6tZdi6A" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="pertouli">
+        <div class="media"><img src="/images/attractions/pertouli/xionodromiko-800.webp" alt="Πετρούλι - Pertouli" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
+        <div class="body">
+          <h3><span data-l="el">Πετρούλι</span><span data-l="en">Pertouli</span></h3>
+          <p class="chip">🚗 <span data-l="el">50 λεπτά με αυτοκίνητο</span><span data-l="en">50 min by car</span></p>
+          <p><span data-l="el">Ορεινό θέρετρο με πυκνά δάση και χιονοδρομικό κέντρο.</span><span data-l="en">Mountain resort with dense forests and ski center.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Pertouli%2C+Greece" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+<article class="card sight" id="plastira">
+        <div class="media"><img src="/images/attractions/limni-plastira/limni_plastira-800.webp" alt="Λίμνη Πλαστήρα - Plastira Lake" loading="lazy" width="800" height="600"></div><p class="credit">&nbsp;</p>
+        <div class="body">
+          <h3><span data-l="el">Λίμνη Πλαστήρα</span><span data-l="en">Plastira Lake</span></h3>
+          <p class="chip">🚗 <span data-l="el">1 ώρα με αυτοκίνητο</span><span data-l="en">1 hour by car</span></p>
+          <p><span data-l="el">Πανέμορφη τεχνητή λίμνη με κρυστάλλινα νερά.</span><span data-l="en">Beautiful artificial lake with crystal clear waters.</span></p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Lake+Plastiras%2C+Greece" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+        </div>
+      </article>
+      </div>
+    </div></section>
+
+    <section id="emergency"><div class="wrap">
+      <div class="kicker2"><span data-l="el">Σε περίπτωση ανάγκης</span><span data-l="en">In case of need</span></div>
+      <h2><span data-l="el">Έκτακτη ανάγκη</span><span data-l="en">Emergency</span></h2>
+      <p class="lead"><span data-l="el">Πατήστε έναν αριθμό για να καλέσετε αμέσως. Το 112 λειτουργεί σε όλη την Ευρώπη, δωρεάν, και στα αγγλικά.</span><span data-l="en">Tap a number to call right away. 112 works across Europe, free of charge, and in English.</span></p>
+      <div class="sos-list">
+        <a class="sos red" href="tel:112">
+        <span class="sos-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span class="sos-txt"><strong><span data-l="el">Ευρωπαϊκός αριθμός έκτακτης ανάγκης</span><span data-l="en">European emergency number</span></strong><small><span data-l="el">Για κάθε κίνδυνο, δωρεάν</span><span data-l="en">For any danger, free of charge</span></small></span>
+        <span class="sos-num">112</span>
+      </a>
+        <a class="sos " href="tel:166">
+        <span class="sos-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span class="sos-txt"><strong><span data-l="el">Ασθενοφόρο (ΕΚΑΒ)</span><span data-l="en">Ambulance (EKAB)</span></strong><small><span data-l="el">Ιατρική έκτακτη ανάγκη</span><span data-l="en">Medical emergency</span></small></span>
+        <span class="sos-num">166</span>
+      </a>
+        <a class="sos " href="tel:100">
+        <span class="sos-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span class="sos-txt"><strong><span data-l="el">Αστυνομία</span><span data-l="en">Police</span></strong><small><span data-l="el"></span><span data-l="en"></span></small></span>
+        <span class="sos-num">100</span>
+      </a>
+        <a class="sos " href="tel:199">
+        <span class="sos-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <span class="sos-txt"><strong><span data-l="el">Πυροσβεστική</span><span data-l="en">Fire brigade</span></strong><small><span data-l="el"></span><span data-l="en"></span></small></span>
+        <span class="sos-num">199</span>
+      </a>
+        <div class="sos split">
+          <a class="sos-main" href="tel:+302431350100">
+            <span class="sos-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span class="sos-txt"><strong><span data-l="el">Γενικό Νοσοκομείο Τρικάλων</span><span data-l="en">Trikala General Hospital</span></strong><small><span data-l="el">Πατήστε για κλήση</span><span data-l="en">Tap to call</span></small></span>
+            <span class="sos-num">24313 50100</span>
+          </a>
+          <a class="btn" href="https://maps.app.goo.gl/pWAw4aFHrd8u5uz59" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Τοποθεσία στο χάρτη</span><span data-l="en">Location on the map</span></span></a>
+        </div>
+      </div>
+
+      <div class="banner">
+        <picture><source type="image/webp" srcset="/images/guide/pharmacies-480.webp 480w, /images/guide/pharmacies-800.webp 800w, /images/guide/pharmacies-1280.webp 1280w" sizes="(max-width:980px) 100vw, 980px"><img src="/images/guide/pharmacies.jpg" alt="" loading="lazy" width="1500" height="996"></picture>
+        <div class="banner-text"><h3><span data-l="el">Φαρμακεία</span><span data-l="en">Pharmacies</span></h3><p><span data-l="el">Κοντινά και εφημερεύοντα</span><span data-l="en">Nearby and on duty</span></p></div>
+      </div>
+      <div class="grid">
+        <article class="card tav">
+        <div class="media logo"><picture><img src="/images/guide/pharmacy1.jpg" alt="Φαρμακείο Θάνος Σιούλας" loading="lazy" width="423" height="439"></picture></div>
+        <h3>Φαρμακείο Θάνος Σιούλας<small data-l="en"> · Thanos Sioulas Pharmacy</small></h3>
+        <p><span data-l="el">Κοντινό φαρμακείο.</span><span data-l="en">Nearby pharmacy.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/f9n8pP5fLGXXMpBU7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+        <article class="card tav">
+        <div class="media "><picture><img src="/images/guide/pharmacy2.jpg" alt="Φαρμακείο" loading="lazy" width="299" height="168"></picture></div>
+        <h3>Φαρμακείο<small data-l="en"> · Pharmacy</small></h3>
+        <p><span data-l="el">Κοντινό φαρμακείο.</span><span data-l="en">Nearby pharmacy.</span></p>
+        <a class="btn" href="https://maps.app.goo.gl/BTwGdWZj94vr6Cds6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-l="el">Άνοιγμα στο χάρτη</span><span data-l="en">Open in Maps</span></span></a>
+      </article>
+        <article class="card tav"><h3><span data-l="el">Εφημερεύοντα φαρμακεία</span><span data-l="en">On-duty pharmacies</span></h3><p><span data-l="el">Ποια φαρμακεία είναι ανοιχτά απόψε, τις Κυριακές και τις αργίες.</span><span data-l="en">Which pharmacies are open tonight, on Sundays and on holidays.</span></p>
+          <a class="btn" href="https://trikala.efhmeries.gr/" target="_blank" rel="noopener"><span><span data-l="el">Δείτε τα εφημερεύοντα</span><span data-l="en">See on-duty pharmacies</span></span></a></article>
+      </div>
+
+      <div class="home">
+        <h3><span data-l="el">Το σπίτι μας</span><span data-l="en">Our apartment</span></h3>
+        <dl>
+          <dt><span data-l="el">Οικοδεσπότης</span><span data-l="en">Host</span></dt>
+          <dd><span data-l="el">Ζωή Τσιαρδάκα</span><span data-l="en">Zoi Tsiardaka</span></dd>
+          <dt><span data-l="el">Τηλέφωνο</span><span data-l="en">Phone</span></dt>
+          <dd><a href="tel:+306936935079">+30 693 693 5079</a>
+              <a class="copy" style="text-decoration:none" href="https://wa.me/306936935079" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="copy" style="text-decoration:none" href="viber://chat?number=%2B306936935079">Viber</a></dd>
+          <dt><span data-l="el">Διεύθυνση</span><span data-l="en">Address</span></dt>
+          <dd><span id="addr">Αθηνάς Εργάνης 8, 42131 Τρίκαλα</span> <button class="copy" type="button" data-copy="addr"><span data-l="el">Αντιγραφή</span><span data-l="en">Copy</span></button></dd>
+          <dt><span data-l="el">ΑΜΑ ακινήτου</span><span data-l="en">Property registry no. (AMA)</span></dt>
+          <dd><span id="ama">00003570750</span> <button class="copy" type="button" data-copy="ama"><span data-l="el">Αντιγραφή</span><span data-l="en">Copy</span></button></dd>
+        </dl>
+        <p class="hint"><span data-l="el">Σε έκτακτη ανάγκη πείτε στο 112 τη διεύθυνση του σπιτιού: Αθηνάς Εργάνης 8, Τρίκαλα.</span><span data-l="en">In an emergency tell 112 the address of the apartment: Athinas Erganis 8, Trikala.</span></p>
+      </div>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">
+    <div class="big"><span data-l="el">Καλή διαμονή!</span><span data-l="en">Enjoy your stay!</span></div>
+    <div class="pname">800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ</div>
+    <div><a href="https://tsiardaka-apartment.gr/">tsiardaka-apartment.gr</a></div>
+    <div class="fine"><span data-l="el">Οι αποστάσεις είναι κατά προσέγγιση. Φωτογραφίες: Wikimedia Commons και Το Χάνι (δείτε τις αναφορές στις κάρτες).</span><span data-l="en">Distances are approximate. Photos: Wikimedia Commons and To Hani (see the credits on the cards).</span></div>
+  </div></footer>
+
+  <a class="sos-fab" href="tel:112" aria-label="Call 112"><span aria-hidden="true">🆘</span><span><span data-l="el">Έκτακτη ανάγκη 112</span><span data-l="en">Emergency 112</span></span></a>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.lang [data-set]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          document.documentElement.lang = b.getAttribute('data-set');
+          try { localStorage.setItem('guide-lang', b.getAttribute('data-set')); } catch (e) {}
+        });
+      });
+      document.querySelectorAll('[data-copy]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var txt = document.getElementById(b.getAttribute('data-copy')).textContent.trim();
+          var done = function () { b.classList.add('done'); setTimeout(function () { b.classList.remove('done'); }, 1400); };
+          if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, function () {}); else done();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

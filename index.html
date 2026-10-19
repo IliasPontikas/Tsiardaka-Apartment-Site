@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>try{if(sessionStorage.getItem('preloader-seen'))document.documentElement.classList.add('no-preloader')}catch(e){}</script>
     <title>800 steps from MAGIC - ΤΟ ΚΕΝΤΡΟ ΣΤΑ ΠΟΔΙΑ ΣΟΥ | Tsiardaka Apartment Τρίκαλα</title>
     <meta name="description" content="Άνετο διαμέρισμα στο κέντρο των Τρικάλων, 800 βήματα από τον Μύλο των Ξωτικών. Ιδανικό για οικογένειες και ζευγάρια. Κράτηση απευθείας για καλύτερες τιμές!">
     <meta name="author" content="Tsiardaka Apartment">
@@ -13,15 +14,14 @@
     <link rel="alternate" hreflang="x-default" href="https://tsiardaka-apartment.gr/">
 
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical assets -->
     <link rel="preload" as="image" type="image/webp" imagesrcset="images/attractions/mylos/panoramic-480.webp 480w, images/attractions/mylos/panoramic-800.webp 800w, images/attractions/mylos/panoramic-1280.webp 1280w, images/attractions/mylos/panoramic-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts: self-hosted (see css/style.css) -->
+    <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/inter-greek-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -63,7 +63,7 @@
     <meta property="place:location:longitude" content="21.764678">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=25fc77a6">
+    <link rel="stylesheet" href="css/style.css?v=b0ef88ae">
     <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
 
@@ -102,6 +102,7 @@
             "addressCountry": "GR"
         },
         "checkinTime": "15:00",
+        "checkoutTime": "11:00",
         "petsAllowed": false,
         "containsPlace": {
             "@type": "Accommodation",
@@ -360,28 +361,28 @@
                     <span class="gallery-caption" data-i18n="about.room.living">Σαλόνι</span>
                 </div>
                 <div class="gallery-strip-item" data-index="5" data-room="kitchen" role="button" tabindex="0">
-                    <picture><source type="image/webp" srcset="images/gallery/kitchen-overview-480.webp 480w, images/gallery/kitchen-overview-800.webp 800w, images/gallery/kitchen-overview-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-overview.jpg" data-full="images/gallery/kitchen-overview-1200.webp" alt="Κουζίνα - Kitchen" width="1200" height="900" loading="lazy"></picture>
-                    <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
-                </div>
-                <div class="gallery-strip-item" data-index="6" data-room="kitchen" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/kitchen-table-480.webp 480w, images/gallery/kitchen-table-800.webp 800w, images/gallery/kitchen-table-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-table.jpg" data-full="images/gallery/kitchen-table-1200.webp" alt="Κουζίνα - Kitchen" width="1200" height="1600" loading="lazy"></picture>
                     <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
                 </div>
-                <div class="gallery-strip-item" data-index="7" data-room="kitchen" role="button" tabindex="0">
+                <div class="gallery-strip-item" data-index="6" data-room="kitchen" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/kitchen-view-480.webp 480w, images/gallery/kitchen-view-800.webp 800w, images/gallery/kitchen-view-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-view.jpg" data-full="images/gallery/kitchen-view-1200.webp" alt="Κουζίνα - Kitchen" width="1200" height="1600" loading="lazy"></picture>
                     <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
                 </div>
-                <div class="gallery-strip-item" data-index="8" data-room="kitchen" role="button" tabindex="0">
+                <div class="gallery-strip-item" data-index="7" data-room="kitchen" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/kitchen-cabinets-480.webp 480w, images/gallery/kitchen-cabinets-800.webp 800w, images/gallery/kitchen-cabinets-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-cabinets.jpg" data-full="images/gallery/kitchen-cabinets-1200.webp" alt="Κουζίνα - Kitchen" width="1200" height="1600" loading="lazy"></picture>
                     <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
                 </div>
-                <div class="gallery-strip-item" data-index="9" data-room="kitchen" role="button" tabindex="0">
+                <div class="gallery-strip-item" data-index="8" data-room="kitchen" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/kitchen-appliances-480.webp 480w, images/gallery/kitchen-appliances-800.webp 800w, images/gallery/kitchen-appliances-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-appliances.jpg" data-full="images/gallery/kitchen-appliances-1200.webp" alt="Κουζίνα - Kitchen" width="1200" height="900" loading="lazy"></picture>
                     <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
                 </div>
-                <div class="gallery-strip-item" data-index="10" data-room="kitchen" role="button" tabindex="0">
+                <div class="gallery-strip-item" data-index="9" data-room="kitchen" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/kitchen-480.webp 480w, images/gallery/kitchen-576.webp 576w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen.jpg" data-full="images/gallery/kitchen-576.webp" alt="Κουζίνα - Kitchen" width="500" height="600" loading="lazy"></picture>
                     <span class="gallery-caption" data-i18n="about.room.kitchen">Κουζίνα</span>
+                </div>
+                <div class="gallery-strip-item" data-index="10" data-room="dining" role="button" tabindex="0">
+                    <picture><source type="image/webp" srcset="images/gallery/kitchen-overview-480.webp 480w, images/gallery/kitchen-overview-800.webp 800w, images/gallery/kitchen-overview-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/kitchen-overview.jpg" data-full="images/gallery/kitchen-overview-1200.webp" alt="Τραπεζαρία - Dining area" width="1200" height="900" loading="lazy"></picture>
+                    <span class="gallery-caption" data-i18n="about.room.dining">Τραπεζαρία</span>
                 </div>
                 <div class="gallery-strip-item" data-index="11" data-room="dining" role="button" tabindex="0">
                     <picture><source type="image/webp" srcset="images/gallery/dining-entrance-480.webp 480w, images/gallery/dining-entrance-800.webp 800w, images/gallery/dining-entrance-1200.webp 1200w" sizes="(max-width: 768px) 280px, 480px"><img src="images/gallery/dining-entrance.jpg" data-full="images/gallery/dining-entrance-1200.webp" alt="Τραπεζαρία - Dining Area" width="1200" height="1600" loading="lazy"></picture>
@@ -590,7 +591,8 @@
                 <div class="attractions-wrapper">
                     <div class="attractions-track" role="region" aria-label="Nearby attractions" tabindex="-1">
                         <div class="attraction-card">
-                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/meteora/meteora-480.webp 480w, images/attractions/meteora/meteora-800.webp 800w, images/attractions/meteora/meteora-1280.webp 1280w, images/attractions/meteora/meteora-1920.webp 1920w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/meteora/meteora.jpg" alt="Μετέωρα" width="400" height="250" loading="lazy"></picture></div>
+                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/meteora/meteora-commons-480.webp 480w, images/attractions/meteora/meteora-commons-800.webp 800w, images/attractions/meteora/meteora-commons-1280.webp 1280w, images/attractions/meteora/meteora-commons-1920.webp 1920w" sizes="(max-width: 768px) 100vw, 380px"><img style="object-position: 12% 50%" src="images/attractions/meteora/meteora-commons.jpg" alt="Μοναστήρι στα Μετέωρα με πουλιά - Monastery at Meteora with birds" width="2000" height="1333" loading="lazy"></picture></div>
+                            <p class="photo-credit">&copy; <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Jolovema</a> &middot; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
                             <div class="attraction-info">
                                 <h3 class="attraction-title" data-i18n="attractions.meteora.title">Μετέωρα</h3>
                                 <span class="attraction-distance" data-i18n="attractions.meteora.distance">29 λεπτά</span>
@@ -602,7 +604,8 @@
                             </div>
                         </div>
                         <div class="attraction-card">
-                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/palaiokarya/palaiokarya-480.webp 480w, images/attractions/palaiokarya/palaiokarya-800.webp 800w, images/attractions/palaiokarya/palaiokarya-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/palaiokarya/palaiokarya.jpg" alt="Το πέτρινο γεφύρι και οι καταρράκτες της Παλαιοκαρυάς - The stone bridge and waterfalls of Palaiokarya" width="1024" height="682" loading="lazy"></picture></div>
+                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/palaiokarya/palaiokarya-commons-480.webp 480w, images/attractions/palaiokarya/palaiokarya-commons-800.webp 800w, images/attractions/palaiokarya/palaiokarya-commons-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/palaiokarya/palaiokarya-commons.jpg" alt="Το πέτρινο γεφύρι και οι καταρράκτες της Παλαιοκαρυάς - The stone bridge and waterfalls of Palaiokarya" width="1333" height="1000" loading="lazy"></picture></div>
+                            <p class="photo-credit">&copy; <a href="https://commons.wikimedia.org/wiki/File:Waterfall_in_Palaiokarya_-_Trikala,_Greece.jpg" target="_blank" rel="noopener">Dimitris9444</a> &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> <span data-i18n="credit.cropped">(περικοπή)</span></p>
                             <div class="attraction-info">
                                 <h3 class="attraction-title" data-i18n="attractions.palaiokarya.title">Καταρράκτες Παλαιοκαρυάς</h3>
                                 <span class="attraction-distance" data-i18n="attractions.palaiokarya.distance">35 λεπτά</span>
@@ -614,7 +617,8 @@
                             </div>
                         </div>
                         <div class="attraction-card">
-                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/square-river/lithaios-480.webp 480w, images/attractions/square-river/lithaios-800.webp 800w, images/attractions/square-river/lithaios-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/square-river/lithaios.jpg" alt="Κεντρική Πλατεία & Ποτάμι" width="400" height="250" loading="lazy"></picture></div>
+                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/square-river/lithaios-commons-480.webp 480w, images/attractions/square-river/lithaios-commons-800.webp 800w, images/attractions/square-river/lithaios-commons-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/square-river/lithaios-commons.jpg" alt="Το ποτάμι Ληθαίος τη νύχτα, Τρίκαλα - The Litheos river at night, Trikala" width="2000" height="1500" loading="lazy"></picture></div>
+                            <p class="photo-credit">&copy; <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">C messier</a> &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
                             <div class="attraction-info">
                                 <h3 class="attraction-title" data-i18n="attractions.square.title">Κεντρική Πλατεία και Ποτάμι</h3>
                                 <span class="attraction-distance" data-i18n="attractions.square.distance">9 λεπτά</span>
@@ -626,9 +630,10 @@
                             </div>
                         </div>
                         <div class="attraction-card">
-                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/old-town/froureio-480.webp 480w, images/attractions/old-town/froureio-550.webp 550w" sizes="(max-width: 768px) 100vw, 380px"><img src="images/attractions/old-town/froureio.jpg" alt="Παλιά Πόλη και Φρούρειο" width="400" height="250" loading="lazy"></picture></div>
+                            <div class="attraction-img"><picture><source type="image/webp" srcset="images/attractions/old-town/froureio-commons-480.webp 480w, images/attractions/old-town/froureio-commons-800.webp 800w, images/attractions/old-town/froureio-commons-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 380px"><img style="object-position: 50% 42%" src="images/attractions/old-town/froureio-commons.jpg" alt="Ο πύργος του ρολογιού στο Φρούριο των Τρικάλων - The clock tower of Trikala Fortress" width="1500" height="1125" loading="lazy"></picture></div>
+                            <p class="photo-credit">&copy; <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Τόμμυ (el.wikipedia)</a> &middot; <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noopener">CC BY-SA 2.5</a></p>
                             <div class="attraction-info">
-                                <h3 class="attraction-title" data-i18n="attractions.oldtown.title">Παλιά Πόλη και Φρούρειο</h3>
+                                <h3 class="attraction-title" data-i18n="attractions.oldtown.title">Παλιά Πόλη και Φρούριο</h3>
                                 <span class="attraction-distance" data-i18n="attractions.oldtown.distance">17 λεπτά</span>
                                 <p class="attraction-desc" data-i18n="attractions.oldtown.desc">Παραδοσιακά αρχοντικά και γραφικά σοκάκια. Ιδανική για βόλτες και φωτογραφίες.</p>
                                 <a href="https://www.google.com/maps/search/?api=1&query=39.55792216516003,21.76285322429936" target="_blank" rel="noopener" class="attraction-map-pin" aria-label="Άνοιγμα στο Google Maps">
@@ -893,7 +898,7 @@
                         <ul class="location-points">
                             <li><strong data-i18n="attractions.mylos.title">Μύλος των Ξωτικών</strong> — <span data-i18n="attractions.mylos.distance">9 λεπτά</span><a href="https://www.google.com/maps/search/?api=1&query=39.54642843380996,21.75882452615013" target="_blank" rel="noopener" class="poi-pin" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
                             <li><strong data-i18n="attractions.square.title">Κεντρική Πλατεία και Ποτάμι</strong> — <span data-i18n="attractions.square.distance">9 λεπτά</span><a href="https://www.google.com/maps/search/?api=1&query=39.55615671060874,21.767885668478698" target="_blank" rel="noopener" class="poi-pin" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
-                            <li><strong data-i18n="attractions.oldtown.title">Παλιά Πόλη και Φρούρειο</strong> — <span data-i18n="attractions.oldtown.distance">17 λεπτά</span><a href="https://www.google.com/maps/search/?api=1&query=39.55792216516003,21.76285322429936" target="_blank" rel="noopener" class="poi-pin" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+                            <li><strong data-i18n="attractions.oldtown.title">Παλιά Πόλη και Φρούριο</strong> — <span data-i18n="attractions.oldtown.distance">17 λεπτά</span><a href="https://www.google.com/maps/search/?api=1&query=39.55792216516003,21.76285322429936" target="_blank" rel="noopener" class="poi-pin" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
                             <li><strong data-i18n="attractions.manavika.title">Μαναβικά</strong> — <span data-i18n="attractions.manavika.distance">13 λεπτά</span><a href="https://www.google.com/maps/search/?api=1&query=39.55758069595936,21.766265246459696" target="_blank" rel="noopener" class="poi-pin" aria-label="Google Maps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
                         </ul>
                     </div>
@@ -903,6 +908,7 @@
                     <h3 data-i18n="weather.title">Καιρός στα Τρίκαλα</h3>
                     <div class="weather-loading" data-i18n="weather.loading">Φόρτωση...</div>
                     <div class="weather-forecast" id="weather-forecast" style="display:none"></div>
+                    <p class="weather-credit"><span data-i18n="weather.credit">Δεδομένα καιρού:</span> <a href="https://www.met.no/en" target="_blank" rel="noopener">MET Norway</a> · <a href="https://api.met.no/doc/License" target="_blank" rel="noopener">CC BY 4.0</a></p>
                 </div>
             </div>
         </section>
@@ -999,7 +1005,7 @@
                     <div class="direct-card">
                         <div class="direct-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
                         <h3 data-i18n="info.c1.title">Check-in / Check-out</h3>
-                        <p data-i18n="info.c1.text">Check-in: 15:00 - 20:00. Παρακαλούμε ενημερώστε μας εκ των προτέρων για την ώρα άφιξής σας. Check-out: έως τις 12:00, αλλά εάν υπάρχει η δυνατότητα επιλέγετε εσείς την ώρα.</p>                    </div>
+                        <p data-i18n="info.c1.text">Check-in: 15:00 - 20:00. Παρακαλούμε ενημερώστε μας εκ των προτέρων για την ώρα άφιξής σας. Check-out: έως τις 11:00, αλλά εάν υπάρχει η δυνατότητα επιλέγετε εσείς την ώρα.</p>                    </div>
                     <div class="direct-card">
                         <div class="direct-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.600 5.600l12.800 12.800"/></svg></div>
                         <h3 data-i18n="info.c3.title">Κανόνες σπιτιού</h3>
@@ -1104,10 +1110,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p><a href="privacy.html" data-i18n="footer.privacy">Πολιτική Απορρήτου</a></p>
-                <p><span data-i18n="footer.host">Οικοδεσπότης: Τσιαρδάκα Ζωή</span> &middot; <span data-i18n="footer.ama">ΑΜΑ: 00003570750</span></p>
+                <nav class="footer-legal" aria-label="Legal">
+                    <a href="privacy.html" data-i18n="footer.privacy">Πολιτική Απορρήτου</a>
+                    <a href="#" data-cookie-settings data-i18n="footer.cookies">Ρυθμίσεις cookies</a>
+                </nav>
+                <p class="footer-host"><span data-i18n="footer.host">Οικοδεσπότης: Τσιαρδάκα Ζωή</span><span class="footer-sep" aria-hidden="true"></span><span data-i18n="footer.ama">ΑΜΑ: 00003570750</span></p>
+                <p class="footer-copy" data-i18n="footer.copyright">© 2026 Tsiardaka Apartment. Με επιφύλαξη παντός δικαιώματος.</p>
                 <p class="footer-credit" data-i18n="footer.credit">Designed and developed by Ilias Pontikas</p>
-                <p data-i18n="footer.copyright">© 2026 Tsiardaka Apartment. Με επιφύλαξη παντός δικαιώματος.</p>
             </div>
         </div>
     </footer>
@@ -1161,8 +1170,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
 <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js" defer></script>
-    <script src="js/language-switcher.js?v=25fc77a6" defer></script>
+    <script src="js/language-switcher.js?v=b0ef88ae" defer></script>
     <!-- Modular entry point -->
-    <script type="module" src="js/main.js?v=25fc77a6"></script>
+    <script type="module" src="js/main.js?v=b0ef88ae"></script>
 </body>
 </html>

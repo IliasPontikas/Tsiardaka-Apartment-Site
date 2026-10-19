@@ -1,3 +1,5 @@
+@import url('fonts.css'); /* self-hosted fonts (no Google Fonts) */
+
 /* ================================================================
    TSIARDAKA APARTMENT - MODERN ELEGANT DESIGN SYSTEM
    Grey · White · Black · Walnut
@@ -122,6 +124,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
     justify-content: center;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
 }
+.no-preloader .preloader { display: none; }
 .preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 /* Last-resort fail-safe, needs no JavaScript: if the scripts never run (a missing file, a blocked script), the loading screen still goes away */
 .preloader { animation: preloaderFailsafe 0.6s ease 9s forwards; }
@@ -990,6 +993,11 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 }
 .attraction-card:hover { translate: 0 -6px; box-shadow: var(--card-shadow-hover); }
 .attraction-img { height: 220px; overflow: hidden; }
+/* photo credit (licence requirement): a small line under the picture, inside the card */
+.photo-credit { margin: 0; padding: 0.55rem 1.5rem 0; font-size: 0.68rem; line-height: 1.4; letter-spacing: 0.02em; color: var(--text-light); }
+.photo-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.photo-credit a:hover { color: var(--secondary); }
+.photo-credit + .attraction-info { padding-top: 0.9rem; }
 .attraction-img img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); will-change: transform; }
 .attractions-controls { display: flex; align-items: center; gap: 1.25rem; }
 .attractions-progress { flex: 1; height: 2px; background: var(--card-border); border-radius: 2px; overflow: hidden; }
@@ -1126,6 +1134,8 @@ picture { display: contents; }
     margin: 0 0 1.25rem;
 }
 .weather-loading { font-size: 0.85rem; color: var(--warm-gray); }
+.weather-credit { margin: 0.9rem 0 0; font-size: 0.72rem; color: var(--text-light); text-align: right; }
+.weather-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .weather-forecast { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; }
 .weather-day {
     text-align: center;
@@ -1667,8 +1677,6 @@ picture { display: contents; }
 }
 .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq-item p { padding: 0 1.5rem 1.3rem; color: var(--text-light); line-height: 1.7; }
-.footer-bottom a { text-decoration: underline; text-underline-offset: 3px; }
-.footer-credit { opacity: 0.8; }
 @media (max-width: 768px) { .direct-grid { grid-template-columns: 1fr; margin-bottom: 3rem; } }
 
 /* 22. FOOTER */
@@ -1695,12 +1703,36 @@ footer { background: #1C1C1E; color: #F5F4F2; padding: 4rem 0 2rem; }
 }
 .footer-links a:hover { opacity: 1; color: var(--secondary); }
 .footer-bottom {
-    border-top: 1px solid rgba(245,244,242,0.1);
+    border-top: 1px solid rgba(245,244,242,0.14);
     margin-top: 3rem;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
+    display: grid;
+    justify-items: center;
+    gap: 1.1rem;
     text-align: center;
-    font-size: 0.82rem;
-    opacity: 0.5;
+    color: rgba(245,244,242,0.78);
+}
+.footer-bottom p { margin: 0; }
+/* row 1: legal links, with a small dot between them */
+.footer-legal { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.4rem 1.6rem; }
+.footer-legal a {
+    color: #F5F4F2; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; padding: 0.35rem 0; border-bottom: 1px solid rgba(245,244,242,0.35);
+    transition: color 0.3s, border-color 0.3s;
+}
+.footer-legal a:hover { color: var(--secondary); border-color: var(--secondary); }
+/* row 2: host and registration number */
+.footer-host { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.3rem 1rem; font-size: 0.85rem; letter-spacing: 0.02em; }
+.footer-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--secondary); opacity: 0.8; }
+/* rows 3 and 4: copyright, then the small credit, set apart by a short line */
+.footer-copy { font-size: 0.8rem; opacity: 0.8; margin-top: 0.6rem !important; position: relative; padding-top: 1.4rem; }
+.footer-copy::before { content: ''; position: absolute; top: 0; left: 50%; width: 44px; height: 1px; background: rgba(245,244,242,0.3); transform: translateX(-50%); }
+.footer-credit { font-size: 0.74rem; font-style: italic; letter-spacing: 0.04em; opacity: 0.6; }
+@media (max-width: 768px) {
+    .footer-bottom { gap: 1rem; padding-top: 1.6rem; }
+    .footer-legal { flex-direction: column; gap: 0.2rem; }
+    .footer-host { flex-direction: column; gap: 0.5rem; }
+    .footer-sep { display: none; }
 }
 
 /* 23. BACK TO TOP — standalone circular button, sits below the book button */
