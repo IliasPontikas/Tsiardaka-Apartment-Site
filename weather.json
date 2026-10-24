@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T00:03:49.849Z",
+  "updated": "2026-10-24T05:02:06.959Z",
   "source": "MET Norway (CC BY 4.0)",
   "time": [
     "2026-10-24",
@@ -11,14 +11,14 @@
   "category": [
     "partly",
     "rain",
-    "cloud",
+    "rain",
     "sun",
     "rain"
   ],
   "tmax": [
     20,
-    17,
-    20,
+    16,
+    18,
     19,
     15
   ],
