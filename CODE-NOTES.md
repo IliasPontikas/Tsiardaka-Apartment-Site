@@ -251,7 +251,7 @@ sayHello();  // Run the function
 
 ```javascript
 const CONFIG = {
-    phone: '+306987589044',
+    phone: '+306936935079',
     email: 'reservations@tsiardaka-apartment.gr'
 };
 // Access with: CONFIG.phone

@@ -15,7 +15,7 @@ import { statSync } from 'node:fs';
 
 const SOURCES = [
     'images/gallery/living-room.jpg', 'images/gallery/kitchen.jpg', 'images/gallery/bedroom.jpg',
-    'images/gallery/bedroom2.jpg', 'images/gallery/dining.jpg', 'images/gallery/bathroom.jpg',
+    'images/gallery/bedroom2.jpg', 'images/gallery/dining.jpg',
     'images/gallery/balcony.jpeg',
     'images/gallery/dining-entrance.jpg', 'images/gallery/dining-wide.jpg', 'images/gallery/dining-painting.jpg',
     'images/gallery/dining-fireplace.jpg', 'images/gallery/dining-decor.jpg',
@@ -23,7 +23,7 @@ const SOURCES = [
     'images/gallery/kitchen-cabinets.jpg', 'images/gallery/kitchen-appliances.jpg',
     'images/gallery/bedroom2-entrance.jpg', 'images/gallery/bedroom2-desk.jpg', 'images/gallery/bedroom2-bed.jpg', 'images/gallery/bedroom2-corner.jpg',
     'images/gallery/bedroom-painting.jpg', 'images/gallery/living-sofa.jpg', 'images/gallery/living-corner.jpg', 'images/gallery/living-tv.jpg', 'images/gallery/living-christmas.jpg',
-    'images/gallery/bathroom-shower.jpg', 'images/gallery/bathroom-sink.jpg', 'images/gallery/balcony-terrace.jpg', 'images/gallery/balcony-table.jpg',
+    'images/gallery/bathroom-marble-vanity.jpg', 'images/gallery/bathroom-marble-shower.jpg', 'images/gallery/balcony-terrace.jpg', 'images/gallery/balcony-table.jpg',
     'images/about/bedroom.jpg', // 1600px crop of socialTags.jpg (About section photo)
     'images/attractions/mylos/panoramic.jpg', 'images/attractions/square-river/lithaios.jpg',
     'images/attractions/old-town/froureio.jpg', 'images/attractions/manavika/tavernes.jpg',

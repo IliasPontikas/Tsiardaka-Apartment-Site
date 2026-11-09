@@ -19,7 +19,7 @@
 |---|---|---|
 | Any visible text (Greek or English) | `js/language-switcher.js` | Find the text; the Greek block is first (`el:`), the English block second (`en:`) |
 | Prices / offers | `js/language-switcher.js` | `offers.offer1.new_price`, `old_price` ... (change both languages) |
-| Phone, email, Airbnb/Booking links | `js/site/config.js` and `index.html` | Search for `306987589044` or the link |
+| Phone, email, Airbnb/Booking links | `js/site/config.js` and `index.html` | Search for `306936935079` or the link |
 | Photos in the gallery | `images/gallery/` + `index.html` | See "Add a photo" below |
 | Colours | `css/style.css` | Top of the file, `:root { --cream ... }` |
 

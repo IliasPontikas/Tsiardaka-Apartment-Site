@@ -4,10 +4,10 @@
 
 export const CONFIG = {
     CONTACT: {
-        phone:    '+306987589044',
+        phone:    '+306936935079',
         email:    'reservations@tsiardaka-apartment.gr',
-        viber:    '+306987589044',
-        whatsapp: '+306987589044'
+        viber:    '+306936935079',
+        whatsapp: '+306936935079'
     },
     PLATFORMS: {
         airbnb:  'https://airbnb.gr/h/800steps',
