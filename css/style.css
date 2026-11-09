@@ -904,7 +904,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
 }
 /* Desktop: square cards - photo on top, icon badge overlapping it, text below (phones keep compact rows) */
 @media (min-width: 769px) {
-    #amenities.section-padding { padding-top: clamp(3.5rem, 6vw, 5.5rem); }
+    /* the section is pinned while the cards stack, so it has to fit inside the window: padding and card size follow the window HEIGHT */
+    #amenities.section-padding { padding-top: clamp(2.5rem, 7vh, 5.5rem); padding-bottom: clamp(2rem, 6vh, 5rem); }
     .amenity-card {
         position: relative;
         grid-template-columns: 1fr;
@@ -913,8 +914,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; line-height: 1.
         align-items: start;
         text-align: center;
         gap: 0;
-        width: min(430px, 46vh);
-        min-width: 300px;
+        width: min(430px, 40vh);
+        min-width: 280px;
         aspect-ratio: 1 / 1;
         min-height: 0;
         margin: 0 auto;

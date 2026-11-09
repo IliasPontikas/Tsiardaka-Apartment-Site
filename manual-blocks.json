@@ -1,7 +1,30 @@
 {
   "note": "Dates you block by hand. start = first blocked night, end = last blocked night (YYYY-MM-DD). The hourly update merges these with the Airbnb calendar.",
   "ranges": [
-    { "start": "2026-10-01", "end": "2026-10-31", "label": "October closed" },
-    { "start": "2027-01-04", "end": "2027-01-05", "label": "booked" }
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "label": "October closed"
+    },
+    {
+      "start": "2026-11-09",
+      "end": "2026-11-10",
+      "label": "Airbnb blocked (not in iCal)"
+    },
+    {
+      "start": "2026-11-22",
+      "end": "2026-11-26",
+      "label": "Airbnb blocked (not in iCal)"
+    },
+    {
+      "start": "2026-12-10",
+      "end": "2026-12-12",
+      "label": "Airbnb reservation (not in iCal)"
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-05",
+      "label": "booked"
+    }
   ]
 }
