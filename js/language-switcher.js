@@ -452,12 +452,12 @@ const calendarTranslations = {
     el: {
         months: ["Ιανουάριος", "Φεβρουάριος", "Μάρτιος", "Απρίλιος", "Μάιος", "Ιούνιος",
                  "Ιούλιος", "Αύγουστος", "Σεπτέμβριος", "Οκτώβριος", "Νοέμβριος", "Δεκέμβριος"],
-        days: ["Κυ", "Δε", "Τρ", "Τε", "Πε", "Πα", "Σα"]
+        days: ["Δε", "Τρ", "Τε", "Πε", "Πα", "Σα", "Κυ"]   // week starts on Monday
     },
     en: {
         months: ["January", "February", "March", "April", "May", "June",
                  "July", "August", "September", "October", "November", "December"],
-        days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+        days: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]   // week starts on Monday
     }
 };
 

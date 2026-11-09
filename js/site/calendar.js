@@ -71,7 +71,7 @@ export const Calendar = {
             : ['January','February','March','April','May','June','July','August','September','October','November','December'];
         var days = (typeof calendarTranslations !== 'undefined' && calendarTranslations[lang])
             ? calendarTranslations[lang].days
-            : ['Su','Mo','Tu','We','Th','Fr','Sa'];
+            : ['Mo','Tu','We','Th','Fr','Sa','Su'];
 
         monthEl.textContent = months[month] + ' ' + year;
 
@@ -85,7 +85,7 @@ export const Calendar = {
         }
 
         grid.innerHTML = '';
-        var firstDay     = new Date(year, month, 1).getDay();
+        var firstDay     = (new Date(year, month, 1).getDay() + 6) % 7; // weeks start on Monday (Sunday = last column)
         var daysInMonth  = new Date(year, month + 1, 0).getDate();
         var today        = new Date(); today.setHours(0, 0, 0, 0);
 
