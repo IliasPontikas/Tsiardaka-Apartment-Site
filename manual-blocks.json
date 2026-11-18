@@ -17,6 +17,11 @@
       "label": "Airbnb blocked (not in iCal)"
     },
     {
+      "start": "2026-12-04",
+      "end": "2026-12-05",
+      "label": "closed by owner"
+    },
+    {
       "start": "2026-12-10",
       "end": "2026-12-12",
       "label": "Airbnb reservation (not in iCal)"
