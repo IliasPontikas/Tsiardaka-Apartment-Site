@@ -13,8 +13,18 @@
     },
     {
       "start": "2026-11-22",
-      "end": "2026-11-26",
-      "label": "Airbnb blocked (not in iCal)"
+      "end": "2026-11-23",
+      "label": "closed (Airbnb calendar)"
+    },
+    {
+      "start": "2026-11-30",
+      "end": "2026-11-30",
+      "label": "closed (Airbnb calendar)"
+    },
+    {
+      "start": "2026-12-01",
+      "end": "2026-12-01",
+      "label": "closed (Airbnb calendar)"
     },
     {
       "start": "2026-12-04",
@@ -23,13 +33,13 @@
     },
     {
       "start": "2026-12-10",
-      "end": "2026-12-12",
-      "label": "Airbnb reservation (not in iCal)"
+      "end": "2026-12-16",
+      "label": "closed (Airbnb calendar)"
     },
     {
-      "start": "2026-12-13",
-      "end": "2026-12-16",
-      "label": "closed by owner"
+      "start": "2026-12-20",
+      "end": "2026-12-27",
+      "label": "closed (Airbnb calendar)"
     },
     {
       "start": "2027-01-04",
